@@ -1,0 +1,20 @@
+.dots_container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 9999;
+};
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #FFC700;
+  border-radius: 50%;
+};

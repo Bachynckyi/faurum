@@ -1,0 +1,110 @@
+.container {
+    width: 100vw;
+    min-width: 320px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+};
+
+.content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 20px);
+    margin: 0px auto;
+    max-width: 1440px;
+    padding: 80px 0px 80px 0px;
+    z-index: 7;
+
+    @media screen and (min-width: 768px) {
+        width: 75vw;
+    };
+
+    @media screen and (min-width: 1024px) {
+        padding: 20px 0px 100px 0px;
+    };
+};
+
+.title {
+    margin: 0px;
+    text-align: center;
+    color: #00A3FF;
+    font-family: "Exo2-Bold";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    z-index: 2;
+
+    @media screen and (min-width: 380px) {
+        font-size: 36px;
+    };
+};
+
+.list_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 30px;
+};
+
+.button_download {
+    max-width: 360px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    border: none;
+    background-color: #00A3FF;
+    border-radius: 16px;
+    scale: 1;
+    transition: 0.3s;
+
+    @media screen and (min-width: 1024px) {
+        &:hover {
+            scale: 1.05;
+            transition: 0.3s;
+        };
+    };
+
+};
+
+.button_download_text {
+    color: #fff;
+    font-family: "Exo2-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    @media screen and (min-width: 390px) {
+        font-size: 18px;
+    };
+};
+
+.icon {
+    width: 25px;
+    height: 25px;
+    color: #fff;
+
+    @media screen and (min-width: 390px) {
+        width: 35px;
+        height: 35px;
+    };
+};
+
+

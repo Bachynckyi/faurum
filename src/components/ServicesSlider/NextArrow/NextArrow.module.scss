@@ -1,0 +1,18 @@
+.arrow_container {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: -98px;
+    right: 0px;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) { 
+        bottom: 30px;
+        right: -60px;
+        rotate: (90deg);
+    };
+
+    @media screen and (min-width: 1440px) { 
+        bottom: 30px;
+    };
+};

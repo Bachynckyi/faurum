@@ -1,0 +1,241 @@
+.container {
+    width: 100vw;
+    min-width: 320px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    background-color: #F4F4F4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+};
+
+.content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 40px);
+    margin: 0px auto;
+    max-width: 1440px;
+    padding: 80px 0px 80px 0px;
+    z-index: 7;
+    min-height: 1012px;
+
+    @media screen and (min-width: 768px) {
+        width: 75vw;
+    };
+
+    @media screen and (min-width: 1024px) {
+        padding: 20px 0px 100px 0px;
+    };
+};
+
+.title {
+    margin: 0px;
+    text-align: center;
+    color: #00A3FF;
+    font-family: "Exo2-Bold";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    z-index: 2;
+};
+
+.input_wrapper {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    @media screen and (min-width: 768px) {
+        gap: 30px;
+    };
+};
+
+.input_option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+};
+
+.radio_button {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;  
+};
+
+.custom_button {
+    display: flex;
+    box-sizing: border-box;
+    width: 46px;
+    height: 42px;
+    border: 3px solid #00A3FF;
+    border-radius: 12px; 
+    background-color: #FFF;
+
+    @media screen and (min-width: 768px) { 
+        width: 56px;
+        height: 53px;
+    };
+};
+
+.custom_button::before {    
+    left: 0px;
+    top: 0px;
+    content: '';
+    position: absolute;
+    display: none;
+    width: 46px;
+    height: 42px;
+    background-color: #00A3FF;
+    border-radius: 12px;
+
+    @media screen and (min-width: 768px) { 
+        width: 56px;
+        height: 53px;
+    };
+};
+
+.radio_button:checked + .custom_button::before {
+    display: flex;
+};
+
+.input_name {
+    position: absolute;
+    color: #181818;
+    font-family: "Exo2-Regular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    @media screen and (min-width: 768px) { 
+        font-size: 24px;
+    };
+};
+
+.radio_button:checked ~ .input_name {
+    color: #FFF;
+};
+
+.details_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+};
+
+.details_list {
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+    list-style-type: none;
+};
+
+.details_item {
+    width: 100%;
+    color: #181818;
+    font-family: "Exo2-Light";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+};
+
+.details_item_correspondent {
+    position: relative;
+    width: 100%;
+    color: #181818;
+    font-family: "Exo2-Light";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 20px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -17px;
+        left: 0px;
+        width: 100%;
+        max-width: 450px;
+        height: 2px;
+        background-color:#FFC700;
+        z-index: 9999;
+    }
+};
+
+.details_name {
+    margin: 0px;
+    font-family: "Exo2-Bold";
+};
+
+.subtitle {
+    text-align: center;
+    color: #00A3FF;
+    font-family: "Exo2-Bold";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+};
+
+.qr_code {
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 600px;
+};
+
+.details_data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+};
+
+.icon_copy {
+    color: #181818;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    rotate: 180deg;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    :hover {
+        background-color: #00A3FF;
+    };
+};
+
+.details_text {
+    width: calc(100% - 30px);
+};
+

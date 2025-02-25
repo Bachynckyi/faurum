@@ -1,0 +1,58 @@
+.container {
+    width: 100vw;
+    min-width: 320px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+};
+
+.content_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 80px 0px 80px 0px;
+    max-width: 1440px;
+    z-index: 7;
+
+    @media screen and (min-width: 1024px) {
+        padding: 30px 0px 80px 0px;
+    };
+};
+
+.title {
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+    color: #00A3FF;
+    font-family: "Exo2-Bold";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+};
+
+.photo_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+};
+
+.photo {
+    display: block;
+    width: 280px;
+    height: 390px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+};
+
+
+

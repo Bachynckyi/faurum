@@ -1,0 +1,240 @@
+.footer_container {
+    min-width: 320px;
+    width: 100vw;
+    position: relative;
+    background: rgba(255, 255, 255, 0.80);
+    z-index: 4;
+    margin-top: auto;
+};
+
+.footer_wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+
+    @media screen and (min-width: 768px) {
+        padding: 50px;
+    };
+
+    @media screen and (min-width: 1024px) {
+        padding: 50px 163px;
+    };
+};
+
+.main_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    @media screen and (min-width: 768px) {
+        gap: 0px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+    };
+};
+
+.contacts_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+};
+
+.contacts_title {
+    margin: 0px 0px 5px 0px;
+    color: #00A3FF;
+    font-family: "Exo2-Bold";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+};
+
+.contacts_info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 13px;
+};
+
+.contacts_text {
+    color: #181818;
+    font-family: "Exo2-Regular";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
+    @media screen and (min-width: 350px) { 
+        font-size: 14px;
+    };
+
+    &:hover {
+        color: #00A3FF
+    };
+};
+
+.logo_container {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    @media screen and (min-width: 768px) {
+        position: relative;
+        top: 0px;
+        right: 0px;
+    };
+
+};
+
+.logo {
+    width: 107px;
+    height: 87px;
+
+    @media screen and (min-width: 768px) {
+        width: 163px;
+        height: 132px;
+    };
+};
+
+.services_container {
+    margin-bottom: 35px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0px;
+    };
+};
+
+.services_title {
+    margin: 0px 0px 20px 0px;
+    color: #00A3FF;
+    font-family: "Exo2-Bold";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+};
+
+.services_list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    max-width: 200px;
+};
+
+.services_item {
+    color: #181818;
+    font-family: "Exo2-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    cursor: pointer;
+
+    @media screen and (min-width: 1024px) {
+        &:hover{
+            color: #00A3FF
+        };
+    };
+};
+
+.services_item_active {
+    color: #00A3FF;
+    font-family: "Exo2-Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    cursor: pointer;
+};
+
+.politics {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    };
+};
+
+.license {
+    margin: 0px;
+    color: rgba(24, 24, 24, 0.40);
+    font-family: "Exo2-Regular";
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @media screen and (min-width: 348px) { 
+        font-size: 10px;
+    };
+
+    @media screen and (min-width: 408px) { 
+        font-size: 12px;
+    };
+    
+};
+
+.politics_license_wrapper_desktop {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        max-width: 237px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 22px;
+    };
+};
+
+.contacts_services {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+};
+
+.contacts_icon_facebook {
+    margin-top: -2px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+    scale: 1;
+
+    &:hover {
+        transition: 0.2s;
+        scale: 1.2;
+    }
+};
+
+.contacts_icon_telegram {
+    padding-top: 2px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: 0.2s;
+    scale: 1;
+
+    &:hover {
+        transition: 0.2s;
+        scale: 1.2;
+    }
+};
+
+
+
+
