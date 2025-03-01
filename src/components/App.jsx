@@ -1,9 +1,11 @@
 import UserRoutes from '../router';
 import { useState, useEffect } from "react";
 import FontFaceObserver from 'fontfaceobserver';
+import { HelmetProvider } from "react-helmet-async";
 
 export const App = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
+  const helmetContext = {}; // Добавлено для предрендеринга
 
   useEffect(() => {
     const fonts = [
@@ -13,19 +15,18 @@ export const App = () => {
     ];
 
     Promise.all(fonts.map(font => font.load()))
-      .then(() => {
-        setFontsLoaded(true);
-      })
-      .catch(() => {
-        setFontsLoaded(true);
-      });
+      .then(() => setFontsLoaded(true))
+      .catch(() => setFontsLoaded(true));
   }, []);
 
-  if (!fontsLoaded) return null
+  if (!fontsLoaded) return null;
 
   return (
-    <div style={{ position: "relative" }}>
-      <UserRoutes />
-    </div>
+    <HelmetProvider context={helmetContext}> {/* Передаем context */}
+      <div style={{ position: "relative" }}>
+        <UserRoutes />
+      </div>
+    </HelmetProvider>
   );
 };
+
