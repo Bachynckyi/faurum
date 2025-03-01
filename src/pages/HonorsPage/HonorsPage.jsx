@@ -2,7 +2,7 @@ import scss from './HonorsPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
-import image from '../../images/logo_parzival-zentrum.png';
+import image from '../../images/favicon.png';
 
 const honorImages = Array.from({ length: 12 }, (_, i) =>
   require(`../../images/honors/honor${i + 1}.jpg`)
