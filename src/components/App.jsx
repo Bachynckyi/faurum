@@ -5,7 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 
 export const App = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
-  const helmetContext = {}; // Добавлено для предрендеринга
+  const helmetContext = {};
 
   useEffect(() => {
     const fonts = [
@@ -22,7 +22,7 @@ export const App = () => {
   if (!fontsLoaded) return null;
 
   return (
-    <HelmetProvider context={helmetContext}> {/* Передаем context */}
+    <HelmetProvider context={helmetContext}> 
       <div style={{ position: "relative" }}>
         <UserRoutes />
       </div>

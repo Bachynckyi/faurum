@@ -2,6 +2,7 @@ import scss from './HonorsPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import image from '../../images/logo_parzival-zentrum.png';
 
 const honorImages = Array.from({ length: 12 }, (_, i) =>
   require(`../../images/honors/honor${i + 1}.jpg`)
@@ -19,6 +20,7 @@ const HonorsPage = () => {
         <meta property="og:title" content={t("Honors_meta_title")} />
         <meta property="og:description" content={t("Honors_meta_description")}/>
         <meta property="og:url" content="https://Bachynckyi.github.io/faurum/about/honors" />
+        <meta property="og:image" content={image} />
       </Helmet>
       <div className={scss.container}>
             <div className={scss.content_wrapper}>
