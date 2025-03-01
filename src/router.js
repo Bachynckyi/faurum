@@ -224,17 +224,6 @@ const UserRoutes = () => {
                   <Route path="/project" element={<ProjectPage/>}/>
                   <Route path="*" element={<NotFoundPage/>}/>
                 </Route>
-              <Route path="/" element={<HomePage />} />
-              <Route element={<Layout />}>
-                <Route path="/about/video" element={<AboutVideoPage />} />
-                <Route path="/about/honors" element={<AboutHonorsPage />} />
-                <Route path="/about/presentation" element={<AboutPresentationPage />} />
-                <Route path="/news" element={<NewsPage />} />
-                <Route path="/news/:id" element={<NewsOnePage />} />
-                <Route path="/partners" element={<PartnersPage />} />
-                <Route path="/reviews" element={<ReviewsPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-              </Route>
             </Routes>
           </motion.div>
         </AnimatePresence>
