@@ -47,9 +47,9 @@ const HomePage = () => {
   }, [i18n.language]);
 
   const logoMap = {
-    en: "../../images/Logo_en.png",
-    de: "../../images/Logo_de.png",
-    ua: "../../images/Logo_ua.png",
+    en: "/images/Logo_en.png",
+    de: "/images/Logo_de.png",
+    ua: "/images/Logo_ua.png",
   };
   const currentLogo = logoMap[i18n.language] || logoMap.ua;
 
