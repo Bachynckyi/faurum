@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/faurum/static/css/main.c80bf4bf.css",
-    "main.js": "/faurum/static/js/main.9d1de8eb.js",
+    "main.js": "/faurum/static/js/main.96f91a5e.js",
     "static/css/198.0888fece.chunk.css": "/faurum/static/css/198.0888fece.chunk.css",
-    "static/js/198.fc371441.chunk.js": "/faurum/static/js/198.fc371441.chunk.js",
+    "static/js/198.637b7936.chunk.js": "/faurum/static/js/198.637b7936.chunk.js",
     "static/css/461.23859c1b.chunk.css": "/faurum/static/css/461.23859c1b.chunk.css",
     "static/js/461.2541dd6e.chunk.js": "/faurum/static/js/461.2541dd6e.chunk.js",
     "static/css/852.4621a57a.chunk.css": "/faurum/static/css/852.4621a57a.chunk.css",
@@ -164,8 +164,8 @@
     "static/media/slick.woff": "/faurum/static/media/slick.295183786cd8a1389865.woff",
     "static/media/telegram_iconH.svg": "/faurum/static/media/telegram_iconH.d13325fcb90d714b92eb100148e4dd45.svg",
     "static/media/telegram_iconF.svg": "/faurum/static/media/telegram_iconF.1c61d5ba0913666b8a3cbf6376ae06eb.svg",
-    "index.html": "/faurum/index.html",
     "static/media/button_more.svg": "/faurum/static/media/button_more.6aa2a80dd8ff3003ae8fc0df8e955a7c.svg",
+    "index.html": "/faurum/index.html",
     "static/media/phone_icon.svg": "/faurum/static/media/phone_icon.ce0952b65265ec18d0cb4dd117c64325.svg",
     "static/media/facebook_iconF.svg": "/faurum/static/media/facebook_iconF.1f4cd702c13f05bd3e2e4453142a2221.svg",
     "static/media/facebook_iconH.svg": "/faurum/static/media/facebook_iconH.4f14a0870c932201d04c43c66696dd72.svg",
@@ -186,9 +186,9 @@
     "static/media/services_slider_dot.svg": "/faurum/static/media/services_slider_dot.689f83a449c9676c4f54.svg",
     "static/media/services_slider_dot_active.svg": "/faurum/static/media/services_slider_dot_active.f2853a9d6c66fed60504.svg",
     "main.c80bf4bf.css.map": "/faurum/static/css/main.c80bf4bf.css.map",
-    "main.9d1de8eb.js.map": "/faurum/static/js/main.9d1de8eb.js.map",
+    "main.96f91a5e.js.map": "/faurum/static/js/main.96f91a5e.js.map",
     "198.0888fece.chunk.css.map": "/faurum/static/css/198.0888fece.chunk.css.map",
-    "198.fc371441.chunk.js.map": "/faurum/static/js/198.fc371441.chunk.js.map",
+    "198.637b7936.chunk.js.map": "/faurum/static/js/198.637b7936.chunk.js.map",
     "461.23859c1b.chunk.css.map": "/faurum/static/css/461.23859c1b.chunk.css.map",
     "461.2541dd6e.chunk.js.map": "/faurum/static/js/461.2541dd6e.chunk.js.map",
     "852.4621a57a.chunk.css.map": "/faurum/static/css/852.4621a57a.chunk.css.map",
@@ -261,6 +261,6 @@
   },
   "entrypoints": [
     "static/css/main.c80bf4bf.css",
-    "static/js/main.9d1de8eb.js"
+    "static/js/main.96f91a5e.js"
   ]
 }
