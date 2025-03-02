@@ -5,9 +5,9 @@ const useMetaData = () => {
   const { i18n } = useTranslation();
 
   const logoMap = {
-    en: "/public/Logo_en.png",
-    de: "/piblic/Logo_de.png",
-    ua: "/public/Logo_ua.png",
+    en: "/Logo_en.png",
+    de: "/Logo_de.png",
+    ua: "/Logo_ua.png",
   };
 
   const siteNameMap = {

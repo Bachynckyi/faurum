@@ -48,7 +48,6 @@ const HomePage = () => {
       }
   }, [i18n.language]);
 
-
   return (
     <>  
         <Helmet>
