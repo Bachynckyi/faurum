@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/faurum/static/css/main.409f7ce8.css",
-    "main.js": "/faurum/static/js/main.b57dfa22.js",
+    "main.css": "/faurum/static/css/main.c80bf4bf.css",
+    "main.js": "/faurum/static/js/main.5b57991b.js",
     "static/css/198.732d6551.chunk.css": "/faurum/static/css/198.732d6551.chunk.css",
     "static/js/198.20f86623.chunk.js": "/faurum/static/js/198.20f86623.chunk.js",
     "static/css/461.23859c1b.chunk.css": "/faurum/static/css/461.23859c1b.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/210.dff862d5.chunk.js": "/faurum/static/js/210.dff862d5.chunk.js",
     "static/css/269.39895993.chunk.css": "/faurum/static/css/269.39895993.chunk.css",
     "static/js/269.6ae8d1f6.chunk.js": "/faurum/static/js/269.6ae8d1f6.chunk.js",
-    "static/css/906.00547809.chunk.css": "/faurum/static/css/906.00547809.chunk.css",
-    "static/js/906.95c3ca52.chunk.js": "/faurum/static/js/906.95c3ca52.chunk.js",
+    "static/css/906.6ec83c9a.chunk.css": "/faurum/static/css/906.6ec83c9a.chunk.css",
+    "static/js/906.2b55e399.chunk.js": "/faurum/static/js/906.2b55e399.chunk.js",
     "static/css/694.31b94cbe.chunk.css": "/faurum/static/css/694.31b94cbe.chunk.css",
     "static/js/694.7fa98505.chunk.js": "/faurum/static/js/694.7fa98505.chunk.js",
     "static/css/428.90c07f31.chunk.css": "/faurum/static/css/428.90c07f31.chunk.css",
     "static/js/428.0d312171.chunk.js": "/faurum/static/js/428.0d312171.chunk.js",
-    "static/css/579.c5aeec64.chunk.css": "/faurum/static/css/579.c5aeec64.chunk.css",
-    "static/js/579.4f73dd0c.chunk.js": "/faurum/static/js/579.4f73dd0c.chunk.js",
+    "static/css/579.c9fc16a2.chunk.css": "/faurum/static/css/579.c9fc16a2.chunk.css",
+    "static/js/579.75f6a559.chunk.js": "/faurum/static/js/579.75f6a559.chunk.js",
     "static/css/656.6e3dcfe7.chunk.css": "/faurum/static/css/656.6e3dcfe7.chunk.css",
     "static/js/656.8c0a71b3.chunk.js": "/faurum/static/js/656.8c0a71b3.chunk.js",
     "static/css/335.6e3dcfe7.chunk.css": "/faurum/static/css/335.6e3dcfe7.chunk.css",
@@ -185,8 +185,8 @@
     "static/media/polygon.svg": "/faurum/static/media/polygon.dc649bc71f8302544294cb899634e947.svg",
     "static/media/services_slider_dot.svg": "/faurum/static/media/services_slider_dot.689f83a449c9676c4f54.svg",
     "static/media/services_slider_dot_active.svg": "/faurum/static/media/services_slider_dot_active.f2853a9d6c66fed60504.svg",
-    "main.409f7ce8.css.map": "/faurum/static/css/main.409f7ce8.css.map",
-    "main.b57dfa22.js.map": "/faurum/static/js/main.b57dfa22.js.map",
+    "main.c80bf4bf.css.map": "/faurum/static/css/main.c80bf4bf.css.map",
+    "main.5b57991b.js.map": "/faurum/static/js/main.5b57991b.js.map",
     "198.732d6551.chunk.css.map": "/faurum/static/css/198.732d6551.chunk.css.map",
     "198.20f86623.chunk.js.map": "/faurum/static/js/198.20f86623.chunk.js.map",
     "461.23859c1b.chunk.css.map": "/faurum/static/css/461.23859c1b.chunk.css.map",
@@ -197,14 +197,14 @@
     "210.dff862d5.chunk.js.map": "/faurum/static/js/210.dff862d5.chunk.js.map",
     "269.39895993.chunk.css.map": "/faurum/static/css/269.39895993.chunk.css.map",
     "269.6ae8d1f6.chunk.js.map": "/faurum/static/js/269.6ae8d1f6.chunk.js.map",
-    "906.00547809.chunk.css.map": "/faurum/static/css/906.00547809.chunk.css.map",
-    "906.95c3ca52.chunk.js.map": "/faurum/static/js/906.95c3ca52.chunk.js.map",
+    "906.6ec83c9a.chunk.css.map": "/faurum/static/css/906.6ec83c9a.chunk.css.map",
+    "906.2b55e399.chunk.js.map": "/faurum/static/js/906.2b55e399.chunk.js.map",
     "694.31b94cbe.chunk.css.map": "/faurum/static/css/694.31b94cbe.chunk.css.map",
     "694.7fa98505.chunk.js.map": "/faurum/static/js/694.7fa98505.chunk.js.map",
     "428.90c07f31.chunk.css.map": "/faurum/static/css/428.90c07f31.chunk.css.map",
     "428.0d312171.chunk.js.map": "/faurum/static/js/428.0d312171.chunk.js.map",
-    "579.c5aeec64.chunk.css.map": "/faurum/static/css/579.c5aeec64.chunk.css.map",
-    "579.4f73dd0c.chunk.js.map": "/faurum/static/js/579.4f73dd0c.chunk.js.map",
+    "579.c9fc16a2.chunk.css.map": "/faurum/static/css/579.c9fc16a2.chunk.css.map",
+    "579.75f6a559.chunk.js.map": "/faurum/static/js/579.75f6a559.chunk.js.map",
     "656.6e3dcfe7.chunk.css.map": "/faurum/static/css/656.6e3dcfe7.chunk.css.map",
     "656.8c0a71b3.chunk.js.map": "/faurum/static/js/656.8c0a71b3.chunk.js.map",
     "335.6e3dcfe7.chunk.css.map": "/faurum/static/css/335.6e3dcfe7.chunk.css.map",
@@ -260,7 +260,7 @@
     "921.f7e1cf04.chunk.js.map": "/faurum/static/js/921.f7e1cf04.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.409f7ce8.css",
-    "static/js/main.b57dfa22.js"
+    "static/css/main.c80bf4bf.css",
+    "static/js/main.5b57991b.js"
   ]
 }
