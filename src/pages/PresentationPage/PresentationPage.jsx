@@ -7,17 +7,18 @@ import { Helmet } from "react-helmet-async";
 const PresentationPage = () => {
   const { t, i18n } = useTranslation();
   const [presentation, setPresentation] = useState("");
+  const basePath = window.location.pathname.split('/')[1]; 
 
   useEffect(() => {
-    const currentLang = i18n.language.toUpperCase(); 
-      if (currentLang.includes("UK") || currentLang.includes("UA") || currentLang.includes("RU")) {
-        setPresentation("../assets/Презентація_Аурум_UKR.pdf");
-      } else if (currentLang.includes("DE")) {
-        setPresentation("../assets/Präsentation_Aurum_DE.pdf");
+    const currentLang = i18n.language; 
+      if (currentLang.includes("uk") || currentLang.includes("ua") || currentLang.includes("ru")) {
+        setPresentation(`/${basePath}/assets/Presentation_Aurum_UA.pdf`);
+      } else if (currentLang.includes("de")) {
+        setPresentation(`/${basePath}/assets/Presentation_Aurum_DE.pdf`);
       } else {
-        setPresentation("../assets/Presentation_Aurum_EN.pdf");
+        setPresentation(`/${basePath}/assets/Presentation_Aurum_EN.pdf`);
       }
-  }, [i18n.language]);
+  }, [i18n.language, basePath]);
 
   return (
     <>

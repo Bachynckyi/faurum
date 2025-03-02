@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 
 const MedicinePage = () => {
   const { t } = useTranslation();
+  const basePath = window.location.pathname.split('/')[1]; 
 
   return (
     <>
@@ -20,19 +21,19 @@ const MedicinePage = () => {
             <div className={scss.content_wrapper}>
               <h1 className={scss.title}>{t("Medicine_title")}</h1>
               <div className={scss.list_wrapper}>
-                  <button className={scss.button_download} onClick={() => window.open("../assets/Anthroposophy_in_the_WHO_system.pdf", "_blank", "noopener,noreferrer")}>
+                  <button className={scss.button_download} onClick={() => window.open(`/${basePath}/assets/Anthroposophy_in_the_WHO_system.pdf`, "_blank", "noopener,noreferrer")}>
                       <MdOutlineScreenSearchDesktop className={scss.icon}/>
                       <span className={scss.button_download_text}>{t("Medicine_presentation1")}</span>
                   </button>
-                  <button className={scss.button_download} onClick={() => window.open("../assets/Homeopathy_in_the_WHO_system.pdf", "_blank", "noopener,noreferrer")}>
+                  <button className={scss.button_download} onClick={() => window.open(`/${basePath}/assets/Homeopathy_in_the_WHO_system.pdf`, "_blank", "noopener,noreferrer")}>
                       <MdOutlineScreenSearchDesktop className={scss.icon}/>
                       <span className={scss.button_download_text}>{t("Medicine_presentation2")}</span>
                   </button>
-                  <button className={scss.button_download} onClick={() => window.open("../assets/WHO_Report_2019.pdf", "_blank", "noopener,noreferrer")}>
+                  <button className={scss.button_download} onClick={() => window.open(`/${basePath}/assets/WHO_Report_2019.pdf`, "_blank", "noopener,noreferrer")}>
                       <MdOutlineScreenSearchDesktop className={scss.icon}/>
                       <span className={scss.button_download_text}>{t("Medicine_presentation3")}</span>
                   </button>
-                  <button className={scss.button_download} onClick={() => window.open("../assets/About_Anthroposophical_Medicine.pdf", "_blank", "noopener,noreferrer")}>
+                  <button className={scss.button_download} onClick={() => window.open(`/${basePath}/assets/About_Anthroposophical_Medicine.pdf`, "_blank", "noopener,noreferrer")}>
                       <MdOutlineScreenSearchDesktop className={scss.icon}/>
                       <span className={scss.button_download_text}>{t("Medicine_presentation4")}</span>
                   </button>

@@ -70,7 +70,7 @@
     "removeBlobs": false,
     "crawl": true,
     "fixWebpackChunksIssue": "CRA2",
-    "include": ["/"],
+    "include": ["/en", "/ua", "/de"],
     "ignoreForPreRendering": ["/faurum/"],
     "debug": true,
     "waitFor": 5000

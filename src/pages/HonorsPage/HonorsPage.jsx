@@ -18,7 +18,6 @@ const HonorsPage = () => {
         {/* <link rel="canonical" href="https://www.clinic-aurum.com/about"></link> */}
         <meta property="og:title" content={t("Honors_meta_title")} />
         <meta property="og:description" content={t("Honors_meta_description")}/>
-        <meta property="og:url" content="https://Bachynckyi.github.io/faurum/about/honors" />
       </Helmet>
       <div className={scss.container}>
             <div className={scss.content_wrapper}>

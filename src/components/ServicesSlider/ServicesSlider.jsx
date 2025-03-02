@@ -14,24 +14,14 @@ const serviceImages = [
   "service6.jpg", "service7.jpg", "service8.jpg", "service9.jpg"
 ].map(img => require(`../../images/services/${img}`));
 
-const servicesData = [
-  { textKeys: ["Home_services_text1.1", "Home_services_text1.2", "Home_services_text1.3"], descKey: "Home_services_description1", link: "/services/konsultaciya-likarya-fizichnoyi-ta-reabilitacijnoyi-medicini" },
-  { textKeys: ["Home_services_text2.1", "Home_services_text2.2"], descKey: "Home_services_description2", link: "/services/konsultaciya-psihologa" },
-  { textKeys: ["Home_services_text3.1", "Home_services_text3.2"], descKey: "Home_services_description3", link: "/services/postizometrichna-relaksaciya" },
-  { textKeys: ["Home_services_text4"], descKey: "Home_services_description4", link: "/services/refleksoterapiya" },
-  { textKeys: ["Home_services_text5.1", "Home_services_text5.2"], descKey: "Home_services_description5", link: "/services/manualna-terapiya-hrebta-ta-suglobiv" },
-  { textKeys: ["Home_services_text6.1", "Home_services_text6.2"], descKey: "Home_services_description6", link: "/services/ritmichne-vtirannya" },
-  { textKeys: ["Home_services_text7"], descKey: "Home_services_description7", link: "/services/kinezioterapiya" },
-  { textKeys: ["Home_services_text9.1", "Home_services_text9.2"], descKey: "Home_services_description9", link: "/services/maslyano-dispersijni-vanni" },
-  { textKeys: ["Home_services_text10.1", "Home_services_text10.2"], descKey: "Home_services_description10", link: "/services/aparatna-presoterapiya" }
-];
+
 
 const ServicesSlider = () => {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   const sliderRef1 = useRef(null);
   const sliderRef2 = useRef(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     setNav1(sliderRef1.current);
@@ -76,6 +66,18 @@ const ServicesSlider = () => {
         } 
     }]
   };
+
+  const servicesData = [
+    { textKeys: ["Home_services_text1.1", "Home_services_text1.2", "Home_services_text1.3"], descKey: "Home_services_description1", link: `/${i18n.language}/services/konsultaciya-likarya-fizichnoyi-ta-reabilitacijnoyi-medicini` },
+    { textKeys: ["Home_services_text2.1", "Home_services_text2.2"], descKey: "Home_services_description2", link: `/${i18n.language}/services/konsultaciya-psihologa` },
+    { textKeys: ["Home_services_text3.1", "Home_services_text3.2"], descKey: "Home_services_description3", link: `/${i18n.language}/services/postizometrichna-relaksaciya` },
+    { textKeys: ["Home_services_text4"], descKey: "Home_services_description4", link: `/${i18n.language}/services/refleksoterapiya` },
+    { textKeys: ["Home_services_text5.1", "Home_services_text5.2"], descKey: "Home_services_description5", link: `/${i18n.language}/services/manualna-terapiya-hrebta-ta-suglobiv` },
+    { textKeys: ["Home_services_text6.1", "Home_services_text6.2"], descKey: "Home_services_description6", link: `/${i18n.language}/services/ritmichne-vtirannya` },
+    { textKeys: ["Home_services_text7"], descKey: "Home_services_description7", link: `/${i18n.language}/services/kinezioterapiya` },
+    { textKeys: ["Home_services_text9.1", "Home_services_text9.2"], descKey: "Home_services_description9", link: `/${i18n.language}/services/maslyano-dispersijni-vanni` },
+    { textKeys: ["Home_services_text10.1", "Home_services_text10.2"], descKey: "Home_services_description10", link: `/${i18n.language}/services/aparatna-presoterapiya` }
+  ];
 
   return (
     <div className={scss.services_slider_container}>

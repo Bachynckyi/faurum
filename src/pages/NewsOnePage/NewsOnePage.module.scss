@@ -76,6 +76,13 @@
 };
 
 
+.main_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .block_wrapper {
     @media screen and (min-width: 1280px) {
         display: flex;

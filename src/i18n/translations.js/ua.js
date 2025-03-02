@@ -1,4 +1,4 @@
-export const uk = {
+export const ua = {
     // Header
     "Header_nav1": "Головна",
     "Header_nav2": "Про нас",

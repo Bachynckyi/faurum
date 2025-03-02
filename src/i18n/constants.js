@@ -1,6 +1,6 @@
 const LOCALS = {
     EN: "en",
-    UK: "uk",
+    UA: "ua",
     RU: "ru",
     DE: "de",
 };

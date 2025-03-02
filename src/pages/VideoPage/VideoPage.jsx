@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 
 const VideoPage = () => {
   const { t } = useTranslation();
+  const isSnap = navigator.userAgent === "ReactSnap"; 
 
   return (
     <>      
@@ -18,52 +19,55 @@ const VideoPage = () => {
       <div className={scss.container}>
         <div className={scss.content_wrapper}>
           <h1 className={scss.title}>{t("Video_title")}</h1>
-          <div className={scss.video_wrapper}>
-            
-            <ReactPlayer 
-              url='https://www.youtube-nocookie.com/watch?v=wc8NOpoWYcE' 
-              controls={true}
-              width="100%"
-              height="100%"
-              className={scss.react_player}
-              config={{
-                youtube: {
-                  embedOptions: {
-                    sandbox: "allow-same-origin allow-scripts allow-presentation",
-                  }
-                }}}
-              />
-          </div>
-          <div className={scss.video_wrapper}>
-            <ReactPlayer 
-              url='https://www.youtube-nocookie.com/watch?v=O8hW6GgZ6v4' 
-              controls={true}
-              width="100%"
-              height="100%"
-              className={scss.react_player}
-              config={{
-                youtube: {
-                  embedOptions: {
-                    sandbox: "allow-same-origin allow-scripts allow-presentation",
-                  }
-                }}}
-              />
-          </div>
-          <div className={scss.video_wrapper}>
-            <ReactPlayer 
-              url='https://www.youtube-nocookie.com/watch?v=mzYagWGKGlw' 
-              controls={true}
-              width="100%"
-              height="100%"
-              className={scss.react_player}
-              config={{
-                youtube: {
-                  embedOptions: {
-                    sandbox: "allow-same-origin allow-scripts allow-presentation",
-                  }
-                }}}
-              />
-          </div>
+          {!isSnap && (
+            <>
+              <div className={scss.video_wrapper}> 
+                <ReactPlayer 
+                  url='https://www.youtube-nocookie.com/watch?v=wc8NOpoWYcE' 
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className={scss.react_player}
+                  config={{
+                    youtube: {
+                      embedOptions: {
+                        sandbox: "allow-same-origin allow-scripts allow-presentation",
+                      }
+                    }}}
+                  />
+              </div>
+              <div className={scss.video_wrapper}>
+                <ReactPlayer 
+                  url='https://www.youtube-nocookie.com/watch?v=O8hW6GgZ6v4' 
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className={scss.react_player}
+                  config={{
+                    youtube: {
+                      embedOptions: {
+                        sandbox: "allow-same-origin allow-scripts allow-presentation",
+                      }
+                    }}}
+                  />
+              </div>
+              <div className={scss.video_wrapper}>
+                <ReactPlayer 
+                  url='https://www.youtube-nocookie.com/watch?v=mzYagWGKGlw' 
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className={scss.react_player}
+                  config={{
+                    youtube: {
+                      embedOptions: {
+                        sandbox: "allow-same-origin allow-scripts allow-presentation",
+                      }
+                    }}}
+                  />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </> 

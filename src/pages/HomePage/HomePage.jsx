@@ -34,15 +34,15 @@ const HomePage = () => {
   const [logo, setLogo] = useState("");
 
   useEffect(() => {
-    const currentLang = i18n.language.toUpperCase(); 
-    if(currentLang.includes("UK" || "UA" || "RU")) {
-        setLogo("UA");
+    const currentLang = i18n.language;
+    if(currentLang.includes("uk") || currentLang.includes("ua") || currentLang.includes("ru")) {
+        setLogo("ua");
       }
-      else if(currentLang.includes("DE")) {
-        setLogo("DE");
+      else if(currentLang.includes("de")) {
+        setLogo("de");
       }
       else {
-        setLogo("EN");
+        setLogo("en");
       }
   }, [i18n.language]);
 
@@ -73,9 +73,9 @@ const HomePage = () => {
                         <div className={scss.intro_wrapper}>
                             <div className={scss.logo_container}>
                                 <div className={scss.logo_wrapper}>
-                                    {logo === "UA" && (<LogoUA className={scss.logo}/>)}
-                                    {logo === "DE" && (<LogoDE className={scss.logo}/>)}
-                                    {logo === "EN" && (<LogoEN className={scss.logo}/>)}
+                                    {logo === "ua" && (<LogoUA className={scss.logo}/>)}
+                                    {logo === "de" && (<LogoDE className={scss.logo}/>)}
+                                    {logo === "en" && (<LogoEN className={scss.logo}/>)}
                                 </div>
                                 <p className={scss.logo_text1}>{t("Home_intro_text1")}</p>
                                 <p className={scss.logo_text2}>{t("Home_intro_text2")}</p>
@@ -85,7 +85,7 @@ const HomePage = () => {
                                     <div className={scss.supported_logo}>
                                         <ParzivalZentrum className={scss.special_logo}/>
                                     </div>
-                                    <Link className={scss.supported_link} to="/project">{t("Home_intro_text4")}</Link>
+                                    <Link className={scss.supported_link} to={`/${i18n.language}/project`}>{t("Home_intro_text4")}</Link>
                                     <ul className={scss.supported_list}>
                                         <li>
                                             <span>{t("Home_intro_text5")}</span>
@@ -115,11 +115,11 @@ const HomePage = () => {
                             </div>
                         </div>
                         <div className={scss.buttons_container}>
-                            <Link className={scss.button_support} to={"/support-project"}>
+                            <Link className={scss.button_support} to={`/${i18n.language}/support-project`}>
                                 <Handshake className={scss.handshake}/>
                                 <span>{t("Home_intro_support")}</span>
                             </Link>
-                            <Link className={scss.button_read} to={"/project"}>{t("Home_intro_link")}</Link>
+                            <Link className={scss.button_read} to={`/${i18n.language}/project`}>{t("Home_intro_link")}</Link>
                         </div>
                     </div>
                 </div>
@@ -140,7 +140,7 @@ const HomePage = () => {
                     <div className={scss.about_text_wrapper}>
                         <span className={scss.about_title_desktop}>{t("Home_about_title")}</span>
                         <span className={scss.about_text}>{t("Home_about_text")}</span>
-                        <Link className={scss.about_link} to="/about/presentation">{t("Home_about_link")}</Link>
+                        <Link className={scss.about_link} to={`/${i18n.language}/about/presentation`}>{t("Home_about_link")}</Link>
                     </div>
                 </div>
                 <div className={scss.partners_container}>
@@ -160,7 +160,7 @@ const HomePage = () => {
                     </div>
                     <ul className={scss.team_list}>
                         <li>
-                            <Link className={scss.team_list_item1} to="/team/yevhen-volchenko">
+                            <Link className={scss.team_list_item1} to={`/${i18n.language}/team/yevhen-volchenko`}>
                                 <div className={scss.team_list_names}>
                                         <span className={scss.team_list_name}>{t("Home_team_name1")} </span>
                                         <span className={scss.team_list_surname}>{t("Home_team_surname1")}</span>
@@ -170,7 +170,7 @@ const HomePage = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link className={scss.team_list_item2} to="/team/snizhana-shcherbakova">
+                            <Link className={scss.team_list_item2} to={`/${i18n.language}/team/snizhana-shcherbakova`}>
                                 <div className={scss.team_list_names}>
                                     <span className={scss.team_list_name}>{t("Home_team_name2")} </span>
                                     <span className={scss.team_list_surname}>{t("Home_team_surname2")}</span>
@@ -180,7 +180,7 @@ const HomePage = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link className={scss.team_list_item3} to="/team/yuriy-korosko">
+                            <Link className={scss.team_list_item3} to={`/${i18n.language}/team/yuriy-korosko`}>
                                 <div className={scss.team_list_names}>
                                     <span className={scss.team_list_name}>{t("Home_team_name3")} </span>
                                     <span className={scss.team_list_surname}>{t("Home_team_surname3")}</span>
@@ -190,7 +190,7 @@ const HomePage = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link className={scss.team_list_item4} to="/team/irina-sergiychuk">
+                            <Link className={scss.team_list_item4} to={`/${i18n.language}/team/irina-sergiychuk`}>
                                 <div className={scss.team_list_names}>
                                         <span className={scss.team_list_name}>{t("Home_team_name4")} </span>
                                         <span className={scss.team_list_surname}>{t("Home_team_surname4")}</span>
@@ -222,7 +222,7 @@ const HomePage = () => {
                         <span className={scss.container_title2}>{t("Home_news_title1")}</span>
                     </div>
                     <NewsSlider/>
-                    <Link className={scss.news_button} to="/news">{t("Home_news_link")}</Link>
+                    <Link className={scss.news_button} to={`/${i18n.language}/news`}>{t("Home_news_link")}</Link>
                 </div>  
                 <div className={scss.reviews_container}>
                     <div className={scss.container_title}>

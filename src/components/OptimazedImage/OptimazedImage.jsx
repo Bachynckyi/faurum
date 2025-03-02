@@ -13,6 +13,7 @@ const OptimizedImage = ({ src, alt, className}) => {
         className={className}
         onLoad={() => setLoaded(true)}
         style={{ opacity: loaded ? 1 : 0, transition: "opacity 0.3s ease-in-out"}}
+        wrapperProps={{style: {display: "block"}}}
       />
   );
 };

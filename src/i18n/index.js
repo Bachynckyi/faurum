@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
-import { uk } from "./translations.js/uk";
+import { ua } from "./translations.js/ua";
 import { en } from "./translations.js/en";
 import { de } from "./translations.js/de";
 
@@ -9,23 +9,33 @@ const resources = {
   "en": {
     translation: en
   },
-  "uk": {
-    translation: uk
+  "ua": {
+    translation: ua
   },
   "ru": {
-    translation: uk
+    translation: ua
   },
   "de": {
     translation: de
   },
 };
 
+const isPrerender = navigator.userAgent === "ReactSnap";
+
 i18n
   .use(initReactI18next) 
   .use(LanguageDetector)
   .init({
     resources,
-    fallbackLng: "uk",
+    fallbackLng: "ua",
+    supportedLngs: ["en", "ua", "de"],
+    nonExplicitSupportedLngs: true,
+    detection: {
+      order: isPrerender ? ["path"] : ["querystring", "localStorage", "navigator", "htmlTag"], 
+      lookupQuerystring: "lng",
+      lookupLocalStorage: "i18nextLng",
+      caches: ["localStorage"],
+    },
     interpolation: {
       escapeValue: false
     },

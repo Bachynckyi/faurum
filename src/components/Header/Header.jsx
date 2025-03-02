@@ -9,10 +9,10 @@ import { ReactComponent as FacebookIcon } from '../../images/facebook_iconH.svg'
 import { ReactComponent as TelegramIcon } from '../../images/telegram_iconH.svg';
 import { IoIosArrowDown } from "react-icons/io";
 import i18next from 'i18next';
-import { LOCALS } from 'i18n/constants';
 import { useTranslation } from 'react-i18next';
 import "../../i18n";
 import Loader from 'components/Loader/Loader';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isActiveMenuLang, setIsActiveMenuLang] = useState(false);
@@ -23,22 +23,22 @@ const Header = () => {
   const { t, i18n } = useTranslation();
   const [langOptions, setLangOptions] = useState([]);
   const [loading, setLoading ] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const currentLang = i18n.language.toUpperCase(); 
-    if(currentLang.includes("UK" || "UA")) {
-      setLangOptions(["UK", "EN", "DE"]);
+    const currentLang = i18n.language;
+    let options = [];
+    if (currentLang === "ua" || currentLang === "uk") {
+      options = ["ua", "en", "de"];
+    } else if (currentLang === "de") {
+      options = ["de", "en", "ua"];
+    } else if (currentLang === "ru") {
+      options = ["ua", "en", "de"];
+    } else {
+      options = ["en", "de", "ua"];
     }
-    else if(currentLang.includes("DE")) {
-      setLangOptions(["DE", "EN", "UK",]);
-    }
-    else if(currentLang.includes("RU")) {
-      setLangOptions(["UK", "EN", "DE"]);
-    }
-    else {
-      setLangOptions(["EN", "DE", "UK"]);
-    }
-  }, [i18n.language])
+    setLangOptions(options);
+  }, [i18n.language]);
 
   const toggleAboutSubmenuMobile = (e) => {
     e.preventDefault();
@@ -89,20 +89,18 @@ const Header = () => {
     }, 1500);
 
     setTimeout(() => {
-      if(lang === "EN"){
-        i18next.changeLanguage(LOCALS.EN);
-      }
-      else if (lang === "DE"){
-        i18next.changeLanguage(LOCALS.DE);
-      }
-      else if (lang === "UK"){
-        i18next.changeLanguage(LOCALS.UK);
-      }
+        const currentLang = i18n.language;
+        i18next.changeLanguage(lang).then(() => {
+          const currentPath = window.location.pathname;
+          const newPath = currentPath.replace("/faurum", "").replace(currentLang, lang)
+          navigate(newPath);
+      });
       setIsActiveMenuLang(false);
       setIsActiveMenuMobileLang(false);
     }, 400);
 
   };
+
 
   return (
     <>    
@@ -115,53 +113,53 @@ const Header = () => {
                 <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to="/">{t("Header_nav1")}</NavLink>
               </li>
               <li className={scss.nav_item_about}>
-                <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to="/about" onClick={disableNavLink}>{t("Header_nav2")}</NavLink>
+                <NavLink className={() => window.location.pathname.includes("about") ? scss.nav_link_current : scss.nav_link} onClick={disableNavLink}>{t("Header_nav2")}</NavLink>
                 <IoIosArrowDown className={scss.arrow_icon}/>
                 <div className={scss.about_submenu}>
-                    <NavLink to="/about/video" className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item}>{t("Header_subnav1")}</NavLink>
-                    <NavLink to="/about/honors" className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item}>{t("Header_subnav2")}</NavLink>
-                    <NavLink to="/about/presentation" className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item}>{t("Header_subnav3")}</NavLink>
-                    <NavLink to="/about/anthroposophical-medicine" className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item}>{t("Header_subnav14")}</NavLink>
+                    <NavLink to={`/${i18n.language}/about/video`} className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item}>{t("Header_subnav1")}</NavLink>
+                    <NavLink to={`/${i18n.language}/about/honors`} className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item}>{t("Header_subnav2")}</NavLink>
+                    <NavLink to={`/${i18n.language}/about/presentation`} className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item}>{t("Header_subnav3")}</NavLink>
+                    <NavLink to={`/${i18n.language}/about/anthroposophical-medicine`} className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item}>{t("Header_subnav14")}</NavLink>
                 </div>
               </li>
               <li className={scss.nav_item_services}>
-                <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to="/services" onClick={disableNavLink}>{t("Header_nav3")}</NavLink>
+                <NavLink className={() => window.location.pathname.includes("services") ? scss.nav_link_current : scss.nav_link} onClick={disableNavLink}>{t("Header_nav3")}</NavLink>
                 <IoIosArrowDown className={scss.arrow_icon}/>
                 <div className={scss.services_submenu}>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to="/services/konsultaciya-likarya-fizichnoyi-ta-reabilitacijnoyi-medicini">{t("Header_subnav4")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to="/services/konsultaciya-psihologa">{t("Header_subnav5")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to="/services/postizometrichna-relaksaciya">{t("Header_subnav6")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to="/services/refleksoterapiya">{t("Header_subnav7")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to="/services/manualna-terapiya-hrebta-ta-suglobiv">{t("Header_subnav8")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to="/services/ritmichne-vtirannya">{t("Header_subnav9")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to="/services/kinezioterapiya">{t("Header_subnav10")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to="/services/maslyano-dispersijni-vanni">{t("Header_subnav12")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to="/services/aparatna-presoterapiya">{t("Header_subnav13")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/konsultaciya-likarya-fizichnoyi-ta-reabilitacijnoyi-medicini`}>{t("Header_subnav4")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/konsultaciya-psihologa`}>{t("Header_subnav5")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/postizometrichna-relaksaciya`}>{t("Header_subnav6")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/refleksoterapiya`}>{t("Header_subnav7")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/manualna-terapiya-hrebta-ta-suglobiv`}>{t("Header_subnav8")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/ritmichne-vtirannya`}>{t("Header_subnav9")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/kinezioterapiya`}>{t("Header_subnav10")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/maslyano-dispersijni-vanni`}>{t("Header_subnav12")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/aparatna-presoterapiya`}>{t("Header_subnav13")}</NavLink>
                 </div>
               </li>
               <li className={scss.nav_item}>
-                <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to="/news">
+                <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to={`/${i18n.language}/news`}>
                   {t("Header_nav4")}
                 </NavLink>
               </li>
               <li className={scss.nav_item}>
-                <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to="/reviews">
+                <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to={`/${i18n.language}/reviews`}>
                   {t("Header_nav5")}
                 </NavLink>
               </li>
               <li className={scss.nav_item}>
-                <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to="/partners">
+                <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to={`/${i18n.language}/partners`}>
                   {t("Header_nav6")}
                 </NavLink>
               </li>
             </ul>
           </nav>
           <div className={scss.header_wrapper}>
-            <Link className={scss.header_button} to={"/support-project"}>
+            <Link className={scss.header_button} to={`/${i18n.language}/support-project`}>
               <HandshakeWhite/>
               <span className={scss.header_button_text}>{t("Header_button_support")}</span>
             </Link>
-            <Link className={scss.header_button_full} to={"/support-project"}>
+            <Link className={scss.header_button_full} to={`/${i18n.language}/support-project`}>
               <HandshakeWhite/>
               <span className={scss.header_button_text}>{t("Header_button_support_full")}</span>
             </Link>
@@ -204,46 +202,46 @@ const Header = () => {
                   <NavLink className={({isActive}) => isActive ? scss.current : scss.nav} to="/" onClick={closeMobileMenu}>{t("Header_nav1")}</NavLink>
                 </li>
                 <li>
-                  <NavLink className={({isActive}) => isActive ? scss.current : scss.nav} onClick={toggleAboutSubmenuMobile} to="/about">
+                  <NavLink className={() => window.location.pathname.includes("about") ? scss.current : scss.nav} onClick={toggleAboutSubmenuMobile}>
                     <span>{t("Header_nav2")}</span>
                     <IoIosArrowDown className={aboutSubmenuMobile === true ? (scss.mobile_arrow_reverse) : (scss.mobile_arrow)}/>
                   </NavLink>
                   <div className={aboutSubmenuMobile === true ? (scss.about_mobile_submenu_active) : (scss.about_mobile_submenu)}>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} to="/about/video" onClick={closeMobileMenu}>{t("Header_subnav1")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} to="/about/honors" onClick={closeMobileMenu}>{t("Header_subnav2")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} to="/about/presentation" onClick={closeMobileMenu}>{t("Header_subnav3")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} to="/about/anthroposophical-medicine" onClick={closeMobileMenu}>{t("Header_subnav14")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} to={`/${i18n.language}/about/video`} onClick={closeMobileMenu}>{t("Header_subnav1")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} to={`/${i18n.language}/about/honors`} onClick={closeMobileMenu}>{t("Header_subnav2")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} to={`/${i18n.language}/about/presentation`} onClick={closeMobileMenu}>{t("Header_subnav3")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} to={`/${i18n.language}/about/anthroposophical-medicine`} onClick={closeMobileMenu}>{t("Header_subnav14")}</NavLink>
                   </div>
                 </li>
                 <li>
-                  <NavLink className={({isActive}) => isActive ? scss.current : scss.nav} onClick={toggleServicesSubmenuMobile} to="/services">
+                  <NavLink className={() => window.location.pathname.includes("services") ? scss.current : scss.nav} onClick={toggleServicesSubmenuMobile}>
                     <span>{t("Header_nav3")}</span>
                     <IoIosArrowDown className={servicesSubmenuMobile === true ? (scss.mobile_arrow_reverse) : (scss.mobile_arrow)}/>
                   </NavLink>
                   <div className={servicesSubmenuMobile === true ? (scss.services_mobile_submenu_active) : (scss.services_mobile_submenu)}>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to="/services/konsultaciya-likarya-fizichnoyi-ta-reabilitacijnoyi-medicini">{t("Header_subnav4")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to="/services/konsultaciya-psihologa">{t("Header_subnav5")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to="/services/postizometrichna-relaksaciya">{t("Header_subnav6")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to="/services/refleksoterapiya">{t("Header_subnav7")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to="/services/manualna-terapiya-hrebta-ta-suglobiv">{t("Header_subnav8")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to="/services/ritmichne-vtirannya">{t("Header_subnav9")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to="/services/kinezioterapiya">{t("Header_subnav10")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to="/services/maslyano-dispersijni-vanni">{t("Header_subnav12")}</NavLink>
-                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to="/services/aparatna-presoterapiya">{t("Header_subnav13")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/konsultaciya-likarya-fizichnoyi-ta-reabilitacijnoyi-medicini`}>{t("Header_subnav4")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/konsultaciya-psihologa`}>{t("Header_subnav5")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/postizometrichna-relaksaciya`}>{t("Header_subnav6")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/refleksoterapiya`}>{t("Header_subnav7")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/manualna-terapiya-hrebta-ta-suglobiv`}>{t("Header_subnav8")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/ritmichne-vtirannya`}>{t("Header_subnav9")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/kinezioterapiya`}>{t("Header_subnav10")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/maslyano-dispersijni-vanni`}>{t("Header_subnav12")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/aparatna-presoterapiya`}>{t("Header_subnav13")}</NavLink>
                   </div>
                 </li>
                 <li>
-                  <NavLink className={({isActive}) => isActive ? scss.current : scss.nav} onClick={closeMobileMenu} to='/news'>{t("Header_nav4")}</NavLink>
+                  <NavLink className={({isActive}) => isActive ? scss.current : scss.nav} onClick={closeMobileMenu} to={`/${i18n.language}/news`}>{t("Header_nav4")}</NavLink>
                 </li>
                 <li>
-                  <NavLink className={({isActive}) => isActive ? scss.current : scss.nav} to="/reviews" onClick={closeMobileMenu}>{t("Header_nav5")}</NavLink>
+                  <NavLink className={({isActive}) => isActive ? scss.current : scss.nav} to={`/${i18n.language}/reviews`} onClick={closeMobileMenu}>{t("Header_nav5")}</NavLink>
                 </li>
                 <li>
-                  <NavLink className={({isActive}) => isActive ? scss.current : scss.nav} to="/partners" onClick={closeMobileMenu}>{t("Header_nav6")}</NavLink>
+                  <NavLink className={({isActive}) => isActive ? scss.current : scss.nav} to={`/${i18n.language}/partners`} onClick={closeMobileMenu}>{t("Header_nav6")}</NavLink>
                 </li>
               </ul>
             </nav>
-            <Link className={scss.button_support} to={"/support-project"} onClick={closeMobileMenu}>
+            <Link className={scss.button_support} to={`/${i18n.language}/support-project`} onClick={closeMobileMenu}>
                 <HandshakeWhite/>
                 <span>{t("Header_button_support")}</span>
             </Link>

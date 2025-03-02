@@ -2,34 +2,20 @@ import scss from './NewsPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { MdArrowOutward } from "react-icons/md";
 import { news } from 'news';
-import { useEffect, useState } from 'react';
 import { ReactComponent as CalendarIcon} from "../../images/calendar_icon.svg";
 import { NavLink } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
+import OptimizedImage from 'components/OptimazedImage/OptimazedImage';
 
 const NewsPage = () => {
   const { t, i18n } = useTranslation();
-  const [currentLang, setCurrentLang] = useState("");
-
-  useEffect(() => {
-    const currentLang = i18n.language.toUpperCase(); 
-    if(currentLang.includes("UK" || "UA" || "RU")) {
-        setCurrentLang("UA");
-      }
-      else if(currentLang.includes("DE")) {
-        setCurrentLang("DE");
-      }
-      else {
-        setCurrentLang("EN");
-      }
-  }, [i18n.language]);
 
   const elements = news.map(({ id, ...props }) => {
     return (
-      <NavLink className={scss.slider_card} key={id} to={`/news/${id}`}>
-        <img src={props.image1} alt='newsImage' className={scss.slider_image}/>
+      <NavLink className={scss.slider_card} key={id} to={`/${i18n.language}/news/${id}`}>
+        <OptimizedImage src={props.image1} alt='newsImage' className={scss.slider_image}/>
         <div className={scss.slider_text_wrapper}>
-            <span className={scss.slider_text}>{props[`title${currentLang}`]}</span>
+            <span className={scss.slider_text}>{props[`title${i18n.language.toUpperCase()}`]}</span>
             <div className={scss.bottom_wrapper}>
               <div className={scss.slider_date_wrapper}>
                 <CalendarIcon/>

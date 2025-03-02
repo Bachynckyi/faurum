@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
 import { ReactComponent as CalendarIcon} from "../../images/calendar_icon.svg";
-import { useEffect, useState } from 'react';
 import { news } from 'news';
 import { MdArrowOutward } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
@@ -12,20 +11,6 @@ import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
 
 const NewsSlider = () => {
   const { i18n } = useTranslation();
-  const [currentLang, setCurrentLang] = useState("");
-
-  useEffect(() => {
-    const currentLang = i18n.language.toUpperCase(); 
-    if(currentLang.includes("UK" || "UA" || "RU")) {
-        setCurrentLang("UA");
-      }
-      else if(currentLang.includes("DE")) {
-        setCurrentLang("DE");
-      }
-      else {
-        setCurrentLang("EN");
-      }
-  }, [i18n.language]);
 
   const settings = {
     dots: false,
@@ -119,13 +104,13 @@ const NewsSlider = () => {
         <div className={scss.slider_card} key={id}>
           <OptimizedImage  src={props.image1} alt='newsImage' className={scss.slider_image}/>
           <div className={scss.slider_text_wrapper}>
-              <span className={scss.slider_text}>{props[`title${currentLang}`]}</span>
+              <span className={scss.slider_text}>{props[`title${i18n.language.toUpperCase()}`]}</span>
               <div className={scss.bottom_wrapper}>
                 <div className={scss.slider_date_wrapper}>
                   <CalendarIcon/>
                   <span className={scss.slider_date}><span className={scss.slider_date_decor}>| </span> {props.date}</span>
                 </div>
-                <NavLink to={`/news/${id}`}><MdArrowOutward className={scss.icon}/></NavLink>
+                <NavLink to={`/${i18n.language}/news/${id}`}><MdArrowOutward className={scss.icon}/></NavLink>
               </div>
           </div>
         </div>

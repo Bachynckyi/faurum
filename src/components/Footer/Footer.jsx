@@ -18,15 +18,15 @@ const { t, i18n } = useTranslation();
 const [logo, setLogo] = useState("");
 
 useEffect(() => {
-    const currentLang = i18n.language.toUpperCase(); 
-    if(currentLang.includes("UK" || "UA" || "RU")) {
-        setLogo("UA");
+    const currentLang = i18n.language;
+    if(currentLang.includes("uk") || currentLang.includes("ua") || currentLang.includes("ru")) {
+        setLogo("ua");
       }
-      else if(currentLang.includes("DE")) {
-        setLogo("DE");
+      else if(currentLang.includes("de")) {
+        setLogo("de");
       }
       else {
-        setLogo("EN");
+        setLogo("en");
       }
   }, [i18n.language]);
 
@@ -62,38 +62,38 @@ useEffect(() => {
                     <p className={scss.services_title}>{t("Footer_services_title")}</p>
                     <ul className={scss.services_list}>
                         <li>
-                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to="/services/konsultaciya-likarya-fizichnoyi-ta-reabilitacijnoyi-medicini">{t("Footer_nav1")}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/konsultaciya-likarya-fizichnoyi-ta-reabilitacijnoyi-medicini`}>{t("Footer_nav1")}</NavLink>
                         </li>
                         <li>
-                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to="/services/konsultaciya-psihologa">{t("Footer_nav2")}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/konsultaciya-psihologa`}>{t("Footer_nav2")}</NavLink>
                         </li>
                         <li>
-                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to="/services/postizometrichna-relaksaciya">{t("Footer_nav3")}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/postizometrichna-relaksaciya`}>{t("Footer_nav3")}</NavLink>
                         </li>
                         <li>
-                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to="/services/refleksoterapiya">{t("Footer_nav4")}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/refleksoterapiya`}>{t("Footer_nav4")}</NavLink>
                         </li>
                         <li>
-                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to="/services/manualna-terapiya-hrebta-ta-suglobiv">{t("Footer_nav5")}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/manualna-terapiya-hrebta-ta-suglobiv`}>{t("Footer_nav5")}</NavLink>
                         </li>
                         <li>
-                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to="/services/ritmichne-vtirannya">{t("Footer_nav6")}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/ritmichne-vtirannya`}>{t("Footer_nav6")}</NavLink>
                         </li>
                         <li>
-                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to="/services/kinezioterapiya">{t("Footer_nav7")}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/kinezioterapiya`}>{t("Footer_nav7")}</NavLink>
                         </li>
                         <li>
-                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to="/services/maslyano-dispersijni-vanni">{t("Footer_nav8")}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/maslyano-dispersijni-vanni`}>{t("Footer_nav8")}</NavLink>
                         </li>
                         <li>
-                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to="/services/aparatna-presoterapiya">{t("Footer_nav9")}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/aparatna-presoterapiya`}>{t("Footer_nav9")}</NavLink>
                         </li>
                     </ul>
                 </div>
                 <div className={scss.logo_container}>
-                    {logo === "UA" && (<NavLink to="/"><LogoUA className={scss.logo}/></NavLink>)}
-                    {logo === "DE" && (<NavLink to="/"><LogoDE className={scss.logo}/></NavLink>)}
-                    {logo === "EN" && (<NavLink to="/"><LogoEN className={scss.logo}/></NavLink>)}
+                    {logo === "ua" && (<NavLink to="/"><LogoUA className={scss.logo}/></NavLink>)}
+                    {logo === "de" && (<NavLink to="/"><LogoDE className={scss.logo}/></NavLink>)}
+                    {logo === "en" && (<NavLink to="/"><LogoEN className={scss.logo}/></NavLink>)}
                     <div className={scss.politics_license_wrapper_desktop}>
                         <p className={scss.license}>{t("Footer_license")}</p>
                         <p className={scss.license}>© {t("Footer_center_name")} {currentYear}</p>
