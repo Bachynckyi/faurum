@@ -33,7 +33,7 @@ button {
 .center .slick-slide div {
   display: flex;
   justify-content: center;
-  margin: 10px 0px;
+  margin: 10px 0px 12px 0px;
 }
 
 .center .slick-list {

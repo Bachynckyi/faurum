@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from 'react';
 import Layout from 'components/Layout/Layout';
 import { AnimatePresence } from "framer-motion";
@@ -35,8 +35,8 @@ const MedicinePage = lazy(() => import('./pages/MedicinePage/MedicinePage'));
 const SupportPage = lazy(() => import('./pages/SupportPage/SupportPage'));
 const ProjectPage = lazy(() => import('./pages/ProjectPage/ProjectPage'));
 
-
 const UserRoutes = () => {
+  const allowedLanguages = ["en", "de", "ua"];
   const location = useLocation();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
@@ -54,6 +54,11 @@ const UserRoutes = () => {
     }
   }, [location.pathname, i18n, currentLang]);
 
+  const CheckLang = () => {
+    const { lang } = useParams();
+    return allowedLanguages.includes(lang) ? <Layout /> : <NotFoundPage/>;
+  };
+
   return (
     <HelmetProvider>
       <Suspense fallback={<Loader/>}>
@@ -68,8 +73,11 @@ const UserRoutes = () => {
             exit="exit"
           >
             <Routes location={location} key={location.pathname}>
-              <Route index element={<HomePage/>}/>
-              <Route path="/:lang" element={<Layout />} >
+              <Route path="/" element={<Navigate to={`/${currentLang}`} replace />} />
+              <Route path="/en" element={<HomePage />} />
+              <Route path="/de" element={<HomePage />} />
+              <Route path="/ua" element={<HomePage />} />
+              <Route path="/:lang" element={<CheckLang />}>
                 <Route path="about/video" element={<AboutVideoPage />} />
                 <Route path="about/honors" element={<AboutHonorsPage />} />
                 <Route path="about/presentation" element={<AboutPresentationPage />} />
@@ -93,8 +101,8 @@ const UserRoutes = () => {
                 <Route path="team/irina-sergiychuk" element={<TeamMember4Page />} />
                 <Route path="support-project" element={<SupportPage />} />
                 <Route path="project" element={<ProjectPage />} />
-                <Route path="*" element={<NotFoundPage />} />
               </Route>
+              <Route path="*" element={<NotFoundPage />}/>
             </Routes>
           </motion.div>
         </AnimatePresence>
