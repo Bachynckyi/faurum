@@ -3,11 +3,12 @@ import { useTranslation } from "react-i18next";
 
 const useMetaData = () => {
   const { i18n } = useTranslation();
+  const baseUrl = window.location.origin;
 
   const logoMap = {
-    en: "/Logo_en.png",
-    de: "/Logo_de.png",
-    ua: "/Logo_ua.png",
+    en: `${baseUrl}/logo-en.png`,
+    de: `${baseUrl}/logo-de.png`,
+    ua: `${baseUrl}/logo-ua.png`,
   };
 
   const siteNameMap = {

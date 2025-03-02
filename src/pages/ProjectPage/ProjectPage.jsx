@@ -11,9 +11,11 @@ import image8 from "../../images/project/project8.jpg";
 import image9 from "../../images/project/project9.jpg";
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import useMetaData from "../../hooks/useMetaData";
 
 const ProjectPage = () => {
   const { t } = useTranslation();
+  const { metaLogo, siteName } = useMetaData();
   return (
     <>
         <Helmet>
@@ -21,6 +23,11 @@ const ProjectPage = () => {
             <meta name="description" content={t("Project_meta_description")}/>
             <meta property="og:title" content={t("Project_meta_title")}/>
             <meta property="og:description" content={t("Project_meta_description")}/>
+            <meta property="og:image" content={metaLogo}/>
+            <meta property="og:image:width" content="1200"/>
+            <meta property="og:image:height" content="630"/>
+            <meta property="og:site_name" content={siteName}/>
+            <meta property="og:type" content="website"/> 
         </Helmet>
         <div className={scss.container}>
             <div className={scss.content_wrapper}>

@@ -7,10 +7,12 @@ import copy from 'copy-to-clipboard';
 import Notiflix from 'notiflix';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import useMetaData from "../../hooks/useMetaData";
 
 const SupportPage = () => {
   const { t } = useTranslation();
   const [currency, setCurrency] = useState("UAH");
+  const { metaLogo, siteName } = useMetaData();
 
   const onChange = (event) => {
     setCurrency(event.target.value);
@@ -27,6 +29,11 @@ const SupportPage = () => {
             <meta name="description" content={t("Support_meta_description")}/>
             <meta property="og:title" content={t("Support_meta_title")} />
             <meta property="og:description" content={t("Support_meta_description")}/>
+            <meta property="og:image" content={metaLogo}/>
+            <meta property="og:image:width" content="1200"/>
+            <meta property="og:image:height" content="630"/>
+            <meta property="og:site_name" content={siteName}/>
+            <meta property="og:type" content="website"/> 
         </Helmet>
         <div className={scss.container}>
             <div className={scss.content_wrapper}>
