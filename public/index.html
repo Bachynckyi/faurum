@@ -1,71 +1,69 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="utf-8">
-<link rel="icon" href="%PUBLIC_URL%/favicon.ico">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="author" content="The Rehabilitation Center AURUM">
-<meta name="robots" content="index, follow">
-<meta name="keywords" content="Реабілітація, медична допомога, лікування">
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta property="og:type" content="website"> 
-<meta name="google" content="notranslate">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="The Rehabilitation Center AURUM">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Реабілітація, медична допомога, лікування">
+    <meta property="og:type" content="website"> 
+    <meta name="google" content="notranslate">
+    <script type="text/javascript">(function (l) {
+            if (l.search[1] === '/') {
+              var decoded = l.search
+                .slice(1)
+                .split('&')
+                .map(function (s) {
+                  return s.replace(/~and~/g, '&');
+                })
+                .join('?');
+              window.history.replaceState(
+                null,
+                null,
+                l.pathname.slice(0, -1) + decoded + l.hash
+              );
+            }
+          })(window.location);
+    </script>
+    <script>
+      (function () {
+        const langMatch = window.location.pathname.match(/\/(en|de|ua)(\/|$)/);
+        const lang = langMatch ? langMatch[1] : "ua";
 
-<script type="text/javascript">(function (l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search
-            .slice(1)
-            .split('&')
-            .map(function (s) {
-              return s.replace(/~and~/g, '&');
-            })
-            .join('?');
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
+        const logoMap = {
+          en: "%PUBLIC_URL%/logo-en.png",
+          de: "%PUBLIC_URL%/logo-de.png",
+          ua: "%PUBLIC_URL%/logo-ua.png"
+        };
+
+        const siteNameMap = {
+          en: "AURUM",
+          de: "AURUM",
+          ua: "АУРУМ"
+        };
+
+        function updateMetaTag(property, content) {
+          let metaTag = document.querySelector(`meta[property="${property}"]`);
+          
+          if (!metaTag) {
+            metaTag = document.createElement("meta");
+            metaTag.setAttribute("property", property);
+            document.head.appendChild(metaTag);
+          }
+
+          metaTag.setAttribute("content", content);
         }
-      })(window.location);
-</script>
-<script>
-  (function () {
-    // Определяем язык из URL (например, "/ua" → "ua")
-    const langMatch = window.location.pathname.match(/\/(en|de|ua)(\/|$)/);
-    const lang = langMatch ? langMatch[1] : "ua";
 
-    const logoMap = {
-      en: "%PUBLIC_URL%/logo-en.png",
-      de: "%PUBLIC_URL%/logo-de.png",
-      ua: "%PUBLIC_URL%/logo-ua.png"
-    };
-
-    const siteNameMap = {
-      en: "AURUM",
-      de: "AURUM",
-      ua: "АУРУМ"
-    };
-
-    function updateMetaTag(property, content) {
-      let metaTag = document.querySelector(`meta[property="${property}"]`);
-      
-      if (!metaTag) {
-        metaTag = document.createElement("meta");
-        metaTag.setAttribute("property", property);
-        document.head.appendChild(metaTag);
-      }
-
-      metaTag.setAttribute("content", content);
-    }
-
-    // Устанавливаем нужные значения
-    updateMetaTag("og:image", logoMap[lang] || logoMap.ua);
-    updateMetaTag("og:site_name", siteNameMap[lang] || siteNameMap.ua);
-  })();
-</script>
-</head>
-<body>
-  <div id="root">
-
-  </div>
-</body>
+        updateMetaTag("og:image", logoMap[lang] || logoMap.ua);
+        updateMetaTag("og:image:width", "1200");
+        updateMetaTag("og:image:height", "630");
+        updateMetaTag("og:site_name", siteNameMap[lang] || siteNameMap.ua);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root">
+    </div>
+  </body>
 </html>
