@@ -5,10 +5,8 @@
 <meta name="author" content="The Rehabilitation Center AURUM">
 <meta name="robots" content="index, follow">
 <meta name="keywords" content="Реабілітація, медична допомога, лікування">
-<!-- <meta property="og:image" content="%PUBLIC_URL%/logo-en.png"/> -->
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<!-- <meta property="og:site_name" content="AURUM"> -->
 <meta property="og:type" content="website"> 
 <meta name="google" content="notranslate">
 
@@ -41,18 +39,27 @@
       ua: "%PUBLIC_URL%/logo-ua.png"
     };
 
-    // Проверяем, есть ли уже тег <meta property="og:image">
-    let ogImageMeta = document.querySelector('meta[property="og:image"]');
-    
-    if (!ogImageMeta) {
-      // Если нет, создаем новый <meta> и добавляем в <head>
-      ogImageMeta = document.createElement("meta");
-      ogImageMeta.setAttribute("property", "og:image");
-      document.head.appendChild(ogImageMeta);
+    const siteNameMap = {
+      en: "AURUM",
+      de: "AURUM",
+      ua: "АУРУМ"
+    };
+
+    function updateMetaTag(property, content) {
+      let metaTag = document.querySelector(`meta[property="${property}"]`);
+      
+      if (!metaTag) {
+        metaTag = document.createElement("meta");
+        metaTag.setAttribute("property", property);
+        document.head.appendChild(metaTag);
+      }
+
+      metaTag.setAttribute("content", content);
     }
 
-    // Устанавливаем нужное изображение
-    ogImageMeta.setAttribute("content", logoMap[lang] || logoMap.ua);
+    // Устанавливаем нужные значения
+    updateMetaTag("og:image", logoMap[lang] || logoMap.ua);
+    updateMetaTag("og:site_name", siteNameMap[lang] || siteNameMap.ua);
   })();
 </script>
 </head>

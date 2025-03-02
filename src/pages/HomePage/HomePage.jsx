@@ -28,12 +28,10 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
-import useMetaData from "../../hooks/useMetaData";
 
 const HomePage = () => {
  const { t, i18n } = useTranslation();
   const [logo, setLogo] = useState("");
-  const { metaLogo, siteName } = useMetaData();
 
   useEffect(() => {
     const currentLang = i18n.language;
@@ -48,8 +46,6 @@ const HomePage = () => {
       }
   }, [i18n.language]);
 
-  console.log(metaLogo);
-
   return (
     <>  
         <Helmet defer={false}>
@@ -57,7 +53,6 @@ const HomePage = () => {
             <meta name="description" content={t("Home_meta_description")}/>
             <meta property="og:title" content={t("Home_meta_title")}/>
             <meta property="og:description" content={t("Home_meta_description")}/>
-            <meta property="og:site_name" content={siteName}/>
         </Helmet>
         <div className={scss.container}>
             <div className={scss.background_wrapper1}></div>
