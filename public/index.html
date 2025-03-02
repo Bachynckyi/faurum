@@ -4,7 +4,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="author" content="The Rehabilitation Center AURUM">
 <meta name="robots" content="index, follow">
-<meta name="keywords" content="Реабілітація, медична допомога, лікування, реабілітаційний центр, медичний центр, допомога">
+<meta name="keywords" content="Реабілітація, медична допомога, лікування">
+<!-- <meta property="og:image" content="%PUBLIC_URL%/logo-ua.png"/> -->
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<!-- <meta property="og:site_name" content="AURUM"> -->
+<meta property="og:type" content="website"> 
 <meta name="google" content="notranslate">
 
 <script type="text/javascript">(function (l) {
@@ -23,11 +28,29 @@
           );
         }
       })(window.location);
-      </script>
-      </head>
-      <body>
-        <div id="root">
+</script>
+<!-- <script>
+  (function () {
+    const lang = navigator.language.startsWith("de") ? "de" :
+                 navigator.language.startsWith("ua") ? "ua" : "en";
 
-        </div>
-      </body>
-      </html>
+    const logoMap = {
+      en: "%PUBLIC_URL%/logo-en.png",
+      de: "%PUBLIC_URL%/logo-de.png",
+      ua: "%PUBLIC_URL%/logo-ua.png"
+    };
+
+    const ogImageMeta = document.createElement("meta");
+    ogImageMeta.setAttribute("property", "og:image");
+    ogImageMeta.setAttribute("content", logoMap[lang] || logoMap.ua);
+
+    document.head.appendChild(ogImageMeta);
+  })();
+</script> -->
+</head>
+<body>
+  <div id="root">
+
+  </div>
+</body>
+</html>

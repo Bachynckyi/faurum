@@ -4,8 +4,6 @@ import { useTranslation } from "react-i18next";
 const useMetaData = () => {
   const { i18n } = useTranslation();
   const baseUrl = window.location.origin;
-  console.log(baseUrl);
-
   const logoMap = {
     en: `${baseUrl}/faurum/logo-en.png`,
     de: `${baseUrl}/faurum/logo-de.png`,

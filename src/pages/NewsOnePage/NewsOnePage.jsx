@@ -6,14 +6,12 @@ import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
-import useMetaData from "../../hooks/useMetaData";
 
 const NewsOnePage = () => {
   const { i18n } = useTranslation();
   const { id: newsId } = useParams();
   const [error, setError] = useState(false);
   const [currentNews, setCurrentNews] = useState([]);
-  const { metaLogo, siteName } = useMetaData();
 
   useEffect(() => {
     const foundNews = news.find(item => item.id === newsId);
@@ -35,12 +33,7 @@ const NewsOnePage = () => {
         <meta name="description" content={currentNews[`text1${i18n.language.toLocaleUpperCase()}`]}/>
         {/* <link rel="canonical" href="https://www.clinic-aurum.com/news"></link> */}
         <meta property="og:title" content={currentNews[`title${i18n.language.toLocaleUpperCase()}`]}/>
-        <meta property="og:description" content={currentNews[`text1${i18n.language.toLocaleUpperCase()}`]}/>
-        <meta property="og:image" content={metaLogo}/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="630"/>
-        <meta property="og:site_name" content={siteName}/>
-        <meta property="og:type" content="website"/>    
+        <meta property="og:description" content={currentNews[`text1${i18n.language.toLocaleUpperCase()}`]}/>    
       </Helmet>
       <div className={scss.container}>
         {currentNews && (

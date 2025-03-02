@@ -21,10 +21,7 @@ const HonorsPage = () => {
         <meta property="og:title" content={t("Honors_meta_title")} />
         <meta property="og:description" content={t("Honors_meta_description")}/>
         <meta property="og:image" content={metaLogo}/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="630"/>
         <meta property="og:site_name" content={siteName}/>
-        <meta property="og:type" content="website"/> 
       </Helmet>
       <div className={scss.container}>
             <div className={scss.content_wrapper}>
