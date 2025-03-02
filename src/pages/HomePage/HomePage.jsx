@@ -28,10 +28,12 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import useMetaData from "../../hooks/useMetaData";
 
 const HomePage = () => {
  const { t, i18n } = useTranslation();
   const [logo, setLogo] = useState("");
+  const { metaLogo, siteName } = useMetaData();
 
   useEffect(() => {
     const currentLang = i18n.language;
@@ -46,20 +48,6 @@ const HomePage = () => {
       }
   }, [i18n.language]);
 
-  const logoMap = {
-    en: "/images/Logo_en.png",
-    de: "/images/Logo_de.png",
-    ua: "/images/Logo_ua.png",
-  };
-  const currentLogo = logoMap[i18n.language] || logoMap.ua;
-
-  const siteNameMap = {
-    en: "AURUM",
-    de: "AURUM",
-    ua: "АУРУМ",
-  };
-  
-  const currentSiteName = siteNameMap[i18n.language] || siteNameMap.ua;
 
   return (
     <>  
@@ -68,10 +56,10 @@ const HomePage = () => {
             <meta name="description" content={t("Home_meta_description")}/>
             <meta property="og:title" content={t("Home_meta_title")}/>
             <meta property="og:description" content={t("Home_meta_description")}/>
-            <meta property="og:image" content={currentLogo}/>
+            <meta property="og:image" content={metaLogo}/>
             <meta property="og:image:width" content="1200"/>
             <meta property="og:image:height" content="630"/>
-            <meta property="og:site_name" content={currentSiteName}/>
+            <meta property="og:site_name" content={siteName}/>
             <meta property="og:type" content="website"/> 
         </Helmet>
         <div className={scss.container}>
