@@ -58,7 +58,6 @@ const HomePage = () => {
             <meta property="og:title" content={t("Home_meta_title")}/>
             <meta property="og:description" content={t("Home_meta_description")}/>
             <meta property="og:site_name" content={siteName}/>
-            <meta property="og:image" content={metaLogo}/>
         </Helmet>
         <div className={scss.container}>
             <div className={scss.background_wrapper1}></div>
