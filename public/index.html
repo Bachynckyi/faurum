@@ -31,8 +31,9 @@
 </script>
 <script>
   (function () {
-    const lang = navigator.language.startsWith("de") ? "de" :
-                 navigator.language.startsWith("ua") ? "ua" : "en";
+    // Определяем язык из URL (например, "/ua" → "ua")
+    const langMatch = window.location.pathname.match(/\/(en|de|ua)(\/|$)/);
+    const lang = langMatch ? langMatch[1] : "ua";
 
     const logoMap = {
       en: "%PUBLIC_URL%/logo-en.png",
@@ -40,11 +41,18 @@
       ua: "%PUBLIC_URL%/logo-ua.png"
     };
 
-    const ogImageMeta = document.createElement("meta");
-    ogImageMeta.setAttribute("property", "og:image");
-    ogImageMeta.setAttribute("content", logoMap[lang] || logoMap.ua);
+    // Проверяем, есть ли уже тег <meta property="og:image">
+    let ogImageMeta = document.querySelector('meta[property="og:image"]');
+    
+    if (!ogImageMeta) {
+      // Если нет, создаем новый <meta> и добавляем в <head>
+      ogImageMeta = document.createElement("meta");
+      ogImageMeta.setAttribute("property", "og:image");
+      document.head.appendChild(ogImageMeta);
+    }
 
-    document.head.appendChild(ogImageMeta);
+    // Устанавливаем нужное изображение
+    ogImageMeta.setAttribute("content", logoMap[lang] || logoMap.ua);
   })();
 </script>
 </head>
