@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import PrevArrow from "./PrevArrow/PrevArrow";
 import NextArrow from "./NextArrow/NextArrow";
 import { useTranslation } from "react-i18next";
-import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
 
 const serviceImages = [
   "service1.jpg", "service2.jpg", "service3.jpg", "service4.jpg", "service5.png",
@@ -83,7 +82,7 @@ const ServicesSlider = () => {
     <div className={scss.services_slider_container}>
       <div className={scss.services_slider1}>
         <Slider {...settings1} asNavFor={nav2} ref={sliderRef1}>
-          {serviceImages.map((img, idx) => <OptimizedImage key={idx} src={img} alt="service" className={scss.slider_image} />)}
+          {serviceImages.map((img, idx) => <img key={idx} src={img} alt="service" className={scss.slider_image} />)}
         </Slider>
       </div>
       <div className={scss.services_slider2}>
