@@ -33,7 +33,7 @@
 
         const logoMap = {
           en: "%PUBLIC_URL%/logo-en.png",
-          de: "%PUBLIC_URL%/logo-de1.png",
+          de: "%PUBLIC_URL%/logo-de.png",
           ua: "%PUBLIC_URL%/logo-ua.png"
         };
 
@@ -44,15 +44,12 @@
         };
 
         function updateMetaTag(property, content) {
-          let metaTag = document.querySelector(`meta[property="${property}"]`);
-          
-          if (!metaTag) {
-            metaTag = document.createElement("meta");
-            metaTag.setAttribute("property", property);
-            document.head.appendChild(metaTag);
-          }
+          document.querySelectorAll(`meta[property="${property}"]`).forEach(tag => tag.remove());
 
+          const metaTag = document.createElement("meta");
+          metaTag.setAttribute("property", property);
           metaTag.setAttribute("content", content);
+          document.head.appendChild(metaTag);
         }
 
         updateMetaTag("og:image", logoMap[lang] || logoMap.ua);

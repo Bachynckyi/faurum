@@ -11,10 +11,10 @@ const ServicePage8 = () => {
     <>
       <Helmet>
         <title>{t("Service_title9")}</title>
-        <meta name="description" content={t("Service_title9")}/>
+        <meta name="description" content={t("Home_services_description9")}/>
         {/* <link rel="canonical" href="https://www.clinic-aurum.com/services"></link> */}
         <meta property="og:title" content={t("Service_title9")} />
-        <meta property="og:description" content={t("Service_title9")}/>
+        <meta property="og:description" content={t("Home_services_description9")}/>
       </Helmet>
       <div className={scss.container}>
           <div className={scss.main_wrapper}>
