@@ -47,18 +47,14 @@
       let metaTag = document.querySelector(`meta[property="${property}"]`);
 
       if (metaTag) {
-        // Если мета-тег уже существует, обновляем его содержимое
         metaTag.setAttribute("content", content);
       } else {
-        // Если нет, создаем новый мета-тег
         metaTag = document.createElement("meta");
         metaTag.setAttribute("property", property);
         metaTag.setAttribute("content", content);
         document.head.appendChild(metaTag);
       }
     }
-
-    // Устанавливаем корректные мета-данные
     updateMetaTag("og:image", logoMap[lang] || logoMap.ua);
     updateMetaTag("og:image:width", "1200");
     updateMetaTag("og:image:height", "630");
