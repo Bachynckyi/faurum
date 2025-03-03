@@ -11,10 +11,10 @@ const TeamMember4Page = () => {
     <>
       <Helmet>
         <title>{t("TeamMember4_name")}</title>
-        <meta name="description" content={t("TeamMember4_name") - ("TeamMember4_position")}/>
+        <meta name="description" content={t("TeamMember4_position")}/>
         {/* <link rel="canonical" href="https://www.clinic-aurum.com/team"></link> */}
         <meta property="og:title" content={t("TeamMember4_name")} />
-        <meta property="og:description" content={t("TeamMember4_name") - ("TeamMember4_position")}/>
+        <meta property="og:description" content={t("TeamMember4_position")}/>
         
       </Helmet>
       <div className={scss.container}>
