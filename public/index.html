@@ -26,41 +26,6 @@
             }
           })(window.location);
     </script>
-<script>
-  (function () {
-    const langMatch = window.location.pathname.match(/\/(en|de|ua)(\/|$)/);
-    const lang = langMatch ? langMatch[1] : "ua";
-
-    const logoMap = {
-      en: "%PUBLIC_URL%/logo-en.png",
-      de: "%PUBLIC_URL%/logo-de.png",
-      ua: "%PUBLIC_URL%/logo-ua.png"
-    };
-
-    const siteNameMap = {
-      en: "AURUM",
-      de: "AURUM",
-      ua: "АУРУМ"
-    };
-
-    function updateMetaTag(property, content) {
-      let metaTag = document.querySelector(`meta[property="${property}"]`);
-
-      if (metaTag) {
-        metaTag.setAttribute("content", content);
-      } else {
-        metaTag = document.createElement("meta");
-        metaTag.setAttribute("property", property);
-        metaTag.setAttribute("content", content);
-        document.head.appendChild(metaTag);
-      }
-    }
-    updateMetaTag("og:image", logoMap[lang] || logoMap.ua);
-    updateMetaTag("og:image:width", "1200");
-    updateMetaTag("og:image:height", "630");
-    updateMetaTag("og:site_name", siteNameMap[lang] || siteNameMap.ua);
-  })();
-</script>
   </head>
   <body>
     <div id="root">

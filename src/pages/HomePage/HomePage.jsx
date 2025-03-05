@@ -26,6 +26,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import MetaTags from "./../../helpers/metaTags";
 
 const HomePage = () => {
  const { t, i18n } = useTranslation();
@@ -51,6 +52,7 @@ const HomePage = () => {
             <meta name="description" content={t("Home_meta_description")}/>
             <meta property="og:title" content={t("Home_meta_title")}/>
             <meta property="og:description" content={t("Home_meta_description")}/>
+            <MetaTags />
         </Helmet>
         <div className={scss.container}>
             <div className={scss.background_wrapper1}></div>
