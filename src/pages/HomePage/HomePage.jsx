@@ -22,8 +22,6 @@ import { ReactComponent as LogoDE } from '../../images/Aurum_logo_DE.svg';
 import { ReactComponent as LogoEN } from '../../images/Aurum_logo_EN.svg';
 import { ReactComponent as Handshake} from "../../images/handshake.svg";
 import { ReactComponent as ParzivalZentrum} from "../../images/parzival-zentrum.svg";
-import ScrollToTop from "react-scroll-to-top";
-import { IoIosArrowUp } from "react-icons/io";
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet-async";
@@ -62,11 +60,6 @@ const HomePage = () => {
             <BackgroundLeft2 className={scss.background_left2}/>
             <BackgroundRight1 className={scss.background_right1}/>
             <BackgroundRight2 className={scss.background_right2}/>
-            <ScrollToTop 
-                smooth
-                className={scss.scroll_button}
-                component={<IoIosArrowUp className={scss.arrowUp}/>}
-            />
             <div className={scss.content_container}>
                 <div className={scss.intro_container_wrapper}>
                     <div className={scss.intro_container}>

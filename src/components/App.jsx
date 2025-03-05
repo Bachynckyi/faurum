@@ -2,6 +2,8 @@ import UserRoutes from '../router';
 import { useState, useEffect } from "react";
 import FontFaceObserver from 'fontfaceobserver';
 import { HelmetProvider } from "react-helmet-async";
+import ScrollToTop from "react-scroll-to-top";
+import { IoIosArrowUp } from "react-icons/io";
 
 export const App = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -24,7 +26,12 @@ export const App = () => {
   return (
     <HelmetProvider context={helmetContext}> 
       <div style={{ position: "relative" }}>
-        <UserRoutes />
+          <ScrollToTop 
+                smooth
+                className="scroll_button"
+                component={<IoIosArrowUp className="arrowUp"/>}
+          />
+          <UserRoutes />
       </div>
     </HelmetProvider>
   );

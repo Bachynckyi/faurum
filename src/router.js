@@ -4,7 +4,6 @@ import Layout from 'components/Layout/Layout';
 import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "../src/helpers/scrollToTop";
 import { HelmetProvider } from "react-helmet-async";
-import Loader from 'components/Loader/Loader';
 import { motion } from "framer-motion";
 import Header from 'components/Header/Header';
 import { useTranslation } from 'react-i18next';
@@ -41,7 +40,7 @@ const UserRoutes = () => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   const animationOptions = {
-    initial: { opacity: 0, filter: "blur(10px)" },
+    initial: { opacity: 0, filter: "blur(10px)"},
     animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
     exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.4, ease: "easeInOut" } }
   };
@@ -61,7 +60,7 @@ const UserRoutes = () => {
 
   return (
     <HelmetProvider>
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={null}>
         <ScrollToTop />
         <Header />
         <AnimatePresence mode='wait'>
@@ -71,6 +70,7 @@ const UserRoutes = () => {
             initial="initial"
             animate="animate"
             exit="exit"
+            style={{position: "absolute", zIndex: -1}}
           >
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Navigate to={`/${currentLang}`} replace />} />
