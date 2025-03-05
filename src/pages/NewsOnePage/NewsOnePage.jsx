@@ -6,8 +6,10 @@ import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import MetaTags from "./../../helpers/metaTags";
 
 const NewsOnePage = () => {
+  const metaTags = MetaTags();
   const { i18n } = useTranslation();
   const { id: newsId } = useParams();
   const [error, setError] = useState(false);
@@ -34,6 +36,7 @@ const NewsOnePage = () => {
         {/* <link rel="canonical" href="https://www.clinic-aurum.com/news"></link> */}
         <meta property="og:title" content={currentNews[`title${i18n.language.toLocaleUpperCase()}`]}/>
         <meta property="og:description" content={currentNews[`text1${i18n.language.toLocaleUpperCase()}`]}/>    
+        {metaTags}
       </Helmet>
       <div className={scss.container}>
         {currentNews && (

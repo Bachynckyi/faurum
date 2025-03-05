@@ -3,9 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { MdOutlineScreenSearchDesktop } from "react-icons/md";
 import { MdArrowOutward } from "react-icons/md";
 import { Helmet } from "react-helmet-async";
+import MetaTags from "./../../helpers/metaTags";
 
 const MedicinePage = () => {
   const { t } = useTranslation();
+  const metaTags = MetaTags(); 
   const basePath = window.location.pathname.split('/')[1];
 
   return (
@@ -16,6 +18,7 @@ const MedicinePage = () => {
         {/* <link rel="canonical" href="https://www.clinic-aurum.com/about"></link> */}
         <meta property="og:title" content={t("Medicine_meta_title")}/>
         <meta property="og:description" content={t("Medicine_meta_description")}/>
+        {metaTags}
       </Helmet>
       <div className={scss.container}>
             <div className={scss.content_wrapper}>

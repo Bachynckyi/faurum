@@ -3,9 +3,11 @@ import { MdOutlineScreenSearchDesktop } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet-async";
+import MetaTags from "./../../helpers/metaTags";
 
 const PresentationPage = () => {
   const { t, i18n } = useTranslation();
+  const metaTags = MetaTags();
   const [presentation, setPresentation] = useState("");
   const basePath = window.location.pathname.split('/')[1];
 
@@ -28,6 +30,7 @@ const PresentationPage = () => {
         {/* <link rel="canonical" href="https://www.clinic-aurum.com/about"></link> */}
         <meta property="og:title" content={t("Presentation_meta_title")}/>
         <meta property="og:description" content={t("Presentation_meta_description")}/>
+        {metaTags}
       </Helmet>
       <div className={scss.container}>
         <div className={scss.content_wrapper}>

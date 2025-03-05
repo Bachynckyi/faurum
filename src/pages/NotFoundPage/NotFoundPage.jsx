@@ -3,9 +3,11 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
 import Footer from 'components/Footer/Footer';
+import MetaTags from "./../../helpers/metaTags";
 
 const NotFoundPage = () => {
   const { t } = useTranslation();
+  const metaTags = MetaTags();
 
   return (
     <>
@@ -15,6 +17,7 @@ const NotFoundPage = () => {
         <meta name="robots" content="noindex, follow"/>
         <meta property="og:title" content={t("PageNotFound_meta_title")}/>
         <meta property="og:description" content={t("PageNotFound_meta_description")}/>
+        {metaTags}
       </Helmet>
       <div className={scss.container_page}>
             <div className={scss.main_container}>

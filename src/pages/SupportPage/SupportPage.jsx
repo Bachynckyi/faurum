@@ -7,10 +7,12 @@ import copy from 'copy-to-clipboard';
 import Notiflix from 'notiflix';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import MetaTags from "./../../helpers/metaTags";
 
 const SupportPage = () => {
   const { t } = useTranslation();
   const [currency, setCurrency] = useState("UAH");
+  const metaTags = MetaTags();
 
   const onChange = (event) => {
     setCurrency(event.target.value);
@@ -26,7 +28,8 @@ const SupportPage = () => {
             <title>{t("Support_meta_title")}</title>
             <meta name="description" content={t("Support_meta_description")}/>
             <meta property="og:title" content={t("Support_meta_title")} />
-            <meta property="og:description" content={t("Support_meta_description")}/> 
+            <meta property="og:description" content={t("Support_meta_description")}/>
+            {metaTags} 
         </Helmet>
         <div className={scss.container}>
             <div className={scss.content_wrapper}>

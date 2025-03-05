@@ -2,9 +2,11 @@ import scss from './PartnersPage.module.scss';
 import Partners from 'components/Partners/Partners';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
+import MetaTags from "./../../helpers/metaTags";
 
 const PartnersPage = () => {
   const { t } = useTranslation();
+  const metaTags = MetaTags();
 
   return (
     <>
@@ -13,6 +15,7 @@ const PartnersPage = () => {
         <meta name="description" content={t("Partners_meta_description")}/>
         <meta property="og:title" content={t("Partners_meta_title")}/>
         <meta property="og:description" content={t("Partners_meta_description")}/>
+        {metaTags}
       </Helmet>
       <div className={scss.container}>
             <div className={scss.content_wrapper}>

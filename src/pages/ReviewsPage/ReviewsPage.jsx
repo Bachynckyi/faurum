@@ -3,9 +3,11 @@ import userIcon from '../../images/user_icon.png';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import MetaTags from "./../../helpers/metaTags";
 
 const ReviewsPage = () => {
   const { t } = useTranslation();
+  const metaTags = MetaTags();
 
   return (
     <>
@@ -14,6 +16,7 @@ const ReviewsPage = () => {
             <meta name="description" content={t("Reviews_meta_description")}/>
             <meta property="og:title" content={t("Reviews_meta_title")}/>
             <meta property="og:description" content={t("Reviews_meta_description")}/>
+            {metaTags}
         </Helmet>
         <div className={scss.container}>
             <div className={scss.content_wrapper}>

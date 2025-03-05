@@ -3,9 +3,11 @@ import { useTranslation } from 'react-i18next';
 import photo from '../../images/team/team_member_1.jpg';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import MetaTags from "./../../helpers/metaTags";
 
 const TeamMember1Page = () => {
   const { t } = useTranslation();
+  const metaTags = MetaTags();
 
   return (
     <> 
@@ -15,6 +17,7 @@ const TeamMember1Page = () => {
         {/* <link rel="canonical" href="https://www.clinic-aurum.com/team"></link> */}
         <meta property="og:title" content={t("TeamMember1_name")} />
         <meta property="og:description" content={t("TeamMember1_position")}/>
+        {metaTags}
       </Helmet>
       <div className={scss.container}>
           <div className={scss.content_wrapper}>

@@ -3,9 +3,11 @@ import service8 from '../../images/services/service8.jpg';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import MetaTags from "./../../helpers/metaTags";
 
 const ServicePage8 = () => {
   const { t } = useTranslation();
+  const metaTags = MetaTags();
   
   return (
     <>
@@ -15,6 +17,7 @@ const ServicePage8 = () => {
         {/* <link rel="canonical" href="https://www.clinic-aurum.com/services"></link> */}
         <meta property="og:title" content={t("Service_title9")} />
         <meta property="og:description" content={t("Home_services_description9")}/>
+        {metaTags}
       </Helmet>
       <div className={scss.container}>
           <div className={scss.main_wrapper}>

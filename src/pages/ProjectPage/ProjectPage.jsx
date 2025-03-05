@@ -11,9 +11,11 @@ import image8 from "../../images/project/project8.jpg";
 import image9 from "../../images/project/project9.jpg";
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
+import MetaTags from "./../../helpers/metaTags";
 
 const ProjectPage = () => {
   const { t } = useTranslation();
+  const metaTags = MetaTags();
   return (
     <>
         <Helmet>
@@ -21,6 +23,7 @@ const ProjectPage = () => {
             <meta name="description" content={t("Project_meta_description")}/>
             <meta property="og:title" content={t("Project_meta_title")}/>
             <meta property="og:description" content={t("Project_meta_description")}/>
+            {metaTags}
         </Helmet>
         <div className={scss.container}>
             <div className={scss.content_wrapper}>
