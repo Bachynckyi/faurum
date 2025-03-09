@@ -40,6 +40,10 @@ const MedicinePage = () => {
                       <MdOutlineScreenSearchDesktop className={scss.icon}/>
                       <span className={scss.button_download_text}>{t("Medicine_presentation4")}</span>
                   </button>
+                  <button className={scss.button_download} onClick={() => window.open(`/${basePath}/assets/Presentation_25.pdf`, "_blank", "noopener,noreferrer")}>
+                      <MdOutlineScreenSearchDesktop className={scss.icon}/>
+                      <span className={scss.button_download_text}>{t("Medicine_presentation5")}</span>
+                  </button>
                   <button className={scss.button_download} onClick={() => window.open("https://iris.who.int/discover?query=anthroposophic+medicine", "_blank", "noopener,noreferrer")}>
                       <MdArrowOutward className={scss.icon}/>
                       <span className={scss.button_download_text}>{t("Medicine_link")}</span>

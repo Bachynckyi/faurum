@@ -42,6 +42,11 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-width: 173px;
+
+    @media screen and (min-width: 380px) { 
+        max-width: 100%;
+    };
 };
 
 .contacts_title {
@@ -57,7 +62,7 @@
 .contacts_info {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     gap: 13px;
 };
 
