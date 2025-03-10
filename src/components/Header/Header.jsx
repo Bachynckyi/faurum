@@ -100,8 +100,7 @@ const Header = () => {
     }, 400);
 
   };
-
-
+  
   return (
     <>    
       {loading === true && (<Loader/>)}
@@ -110,7 +109,7 @@ const Header = () => {
           <nav>
             <ul className={scss.nav_list}>
               <li className={scss.nav_item}>
-                <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to="/">{t("Header_nav1")}</NavLink>
+                <NavLink className={({isActive}) => isActive ? scss.nav_link_current : scss.nav_link} to={`/${i18n.language}`} end>{t("Header_nav1")}</NavLink>
               </li>
               <li className={scss.nav_item_about}>
                 <NavLink className={() => window.location.pathname.includes("about") ? scss.nav_link_current : scss.nav_link} onClick={disableNavLink}>{t("Header_nav2")}</NavLink>
