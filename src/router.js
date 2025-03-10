@@ -113,7 +113,6 @@
 
 // export default UserRoutes;
 
-
 import { Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from 'react';
 import Layout from 'components/Layout/Layout';
