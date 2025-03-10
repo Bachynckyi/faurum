@@ -151,7 +151,6 @@ const MedicinePage = lazy(() => import('./pages/MedicinePage/MedicinePage'));
 const SupportPage = lazy(() => import('./pages/SupportPage/SupportPage'));
 const ProjectPage = lazy(() => import('./pages/ProjectPage/ProjectPage'));
 
-
 const UserRoutes = () => {
   const allowedLanguages = ["en", "de", "ua"];
   const location = useLocation();
@@ -171,7 +170,8 @@ const UserRoutes = () => {
     if (supportedLanguages.includes(langFromUrl) && langFromUrl !== currentLang) {
       i18n.changeLanguage(langFromUrl); 
     }
-  }, [location.pathname, i18n, currentLang]);
+    // eslint-disable-next-line
+  }, [location.pathname]);
 
   const CheckLang = () => {
     const { lang } = useParams();
@@ -222,11 +222,11 @@ const UserRoutes = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}
+              layoutId={location.pathname}
               variants={animationOptions}
               initial="initial"
               animate="animate"
               exit="exit"
-              style={{ position: "absolute", zIndex: -1 }}
             >
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Navigate to={`/${currentLang}`} replace />} />
