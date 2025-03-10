@@ -123,6 +123,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Header from 'components/Header/Header';
 import { useTranslation } from 'react-i18next';
+import Loader from 'components/Loader/Loader';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const AboutVideoPage = lazy(() => import('./pages/VideoPage/VideoPage'));
@@ -179,7 +180,7 @@ const UserRoutes = () => {
 
   return (
     <HelmetProvider>
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loader/>}>
         <ScrollToTop />
         <Header />
         {isMobile ? (
