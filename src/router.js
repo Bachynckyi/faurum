@@ -116,10 +116,10 @@
 import { Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from 'react';
 import Layout from 'components/Layout/Layout';
-import { AnimatePresence } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "../src/helpers/scrollToTop";
 import { HelmetProvider } from "react-helmet-async";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Header from 'components/Header/Header';
 import { useTranslation } from 'react-i18next';
 import Loader from 'components/Loader/Loader';
@@ -155,13 +155,13 @@ const UserRoutes = () => {
   const location = useLocation();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
-  const isMobile = window.innerWidth <= 1024;
+  // const isMobile = window.innerWidth <= 1024;
 
-  const animationOptions = {
-    initial: { opacity: 0, filter: "blur(10px)" },
-    animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
-    exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.4, ease: "easeInOut" } }
-  };
+  // const animationOptions = {
+  //   initial: { opacity: 0, filter: "blur(10px)" },
+  //   animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
+  //   exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.4, ease: "easeInOut" } }
+  // };
 
   useEffect(() => {
     const langFromUrl = location.pathname.split('/')[1]; 
@@ -182,7 +182,7 @@ const UserRoutes = () => {
       <Suspense fallback={<Loader/>}>
         <ScrollToTop />
         <Header />
-        {isMobile ? (
+        {/* {isMobile ? (
           <div>
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Navigate to={`/${currentLang}`} replace />} />
@@ -226,7 +226,7 @@ const UserRoutes = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-            >
+            > */}
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Navigate to={`/${currentLang}`} replace />} />
                 <Route path="/en" element={<HomePage />} />
@@ -259,9 +259,9 @@ const UserRoutes = () => {
                 </Route>
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
-            </motion.div>
-          </AnimatePresence>
-        )}
+            {/* </motion.div>
+          </AnimatePresence> */}
+        {/* )} */}
       </Suspense>
     </HelmetProvider>
   );
