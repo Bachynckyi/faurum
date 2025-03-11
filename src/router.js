@@ -114,7 +114,7 @@
 // export default UserRoutes;
 
 import { Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import Layout from 'components/Layout/Layout';
 import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "../src/helpers/scrollToTop";
@@ -156,6 +156,7 @@ const UserRoutes = () => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   const isMobile = window.innerWidth <= 1024;
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   const animationOptions = {
     initial: { opacity: 0, filter: "blur(10px)" },
@@ -171,6 +172,10 @@ const UserRoutes = () => {
     }
     // eslint-disable-next-line
   }, [location.pathname]);
+
+  useEffect(() => {
+    setIsFirstRender(false);
+  }, []);
 
   const CheckLang = () => {
     const { lang } = useParams();
@@ -222,7 +227,7 @@ const UserRoutes = () => {
             <motion.div
               key={location.pathname}
               variants={animationOptions}
-              initial="initial"
+              initial={isFirstRender ? "animate" : "initial"} 
               animate="animate"
               exit="exit"
               style={{
