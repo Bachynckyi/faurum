@@ -158,9 +158,9 @@ const UserRoutes = () => {
   const isMobile = window.innerWidth <= 1024;
 
   const animationOptions = {
-    initial: { filter: "blur(10px)" },
-    animate: { filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
-    exit: { filter: "blur(10px)", transition: { duration: 0.4, ease: "easeInOut" } }
+    initial: { opacity: 0, filter: "blur(10px)" },
+    animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
+    exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.4, ease: "easeInOut" } }
   };
 
   useEffect(() => {
@@ -218,7 +218,7 @@ const UserRoutes = () => {
             </Routes>
           </div>
         ) : (
-          <AnimatePresence mode="wait" exitBeforeEnter>
+          <AnimatePresence>
             <motion.div
               key={location.pathname}
               variants={animationOptions}
