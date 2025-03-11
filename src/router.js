@@ -158,9 +158,9 @@ const UserRoutes = () => {
   const isMobile = window.innerWidth <= 1024;
 
   const animationOptions = {
-    initial: { opacity: 0, filter: "blur(10px)", },
+    initial: { opacity: 0.2, filter: "blur(10px)", },
     animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
-    exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.4, ease: "easeInOut" } }
+    exit: { opacity: 0.2, filter: "blur(10px)", transition: { duration: 0.4, ease: "easeInOut" } }
   };
 
   useEffect(() => {
