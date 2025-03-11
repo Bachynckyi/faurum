@@ -114,7 +114,7 @@
 // export default UserRoutes;
 
 import { Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
-import { lazy, Suspense, useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import Layout from 'components/Layout/Layout';
 import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "../src/helpers/scrollToTop";
@@ -156,12 +156,11 @@ const UserRoutes = () => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   const isMobile = window.innerWidth <= 1024;
-  const [isFirstRender, setIsFirstRender] = useState(true);
 
   const animationOptions = {
-    initial: { opacity: 0, filter: "blur(10px)" },
-    animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
-    exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.4, ease: "easeInOut" } }
+    initial: { filter: "blur(10px)" },
+    animate: { filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
+    exit: { filter: "blur(10px)", transition: { duration: 0.4, ease: "easeInOut" } }
   };
 
   useEffect(() => {
@@ -172,10 +171,6 @@ const UserRoutes = () => {
     }
     // eslint-disable-next-line
   }, [location.pathname]);
-
-  useEffect(() => {
-    setIsFirstRender(false);
-  }, []);
 
   const CheckLang = () => {
     const { lang } = useParams();
@@ -227,14 +222,9 @@ const UserRoutes = () => {
             <motion.div
               key={location.pathname}
               variants={animationOptions}
-              initial={isFirstRender ? false : "initial"}
+              initial="initial"
               animate="animate"
               exit="exit"
-              style={{
-                position: "absolute",
-                width: "100%",
-                minHeight: "100vh",
-              }}
             >
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Navigate to={`/${currentLang}`} replace />} />
