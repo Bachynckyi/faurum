@@ -227,7 +227,7 @@ const UserRoutes = () => {
             <motion.div
               key={location.pathname}
               variants={animationOptions}
-              initial={isFirstRender ? "animate" : "initial"} 
+              initial={isFirstRender ? false : "initial"}
               animate="animate"
               exit="exit"
               style={{
