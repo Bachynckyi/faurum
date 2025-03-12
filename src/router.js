@@ -158,9 +158,9 @@ const UserRoutes = () => {
   const isMobile = window.innerWidth <= 1024;
 
   const animationOptions = {
-    initial: { opacity: 0.2, filter: "blur(10px)", },
-    animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } },
-    exit: { opacity: 0.2, filter: "blur(10px)", transition: { duration: 0.4, ease: "easeInOut" } }
+    initial: { opacity: 0, filter: "blur(10px)", },
+    animate: { opacity: 1, filter: "blur(0px)" },
+    exit: { opacity: 0, filter: "blur(10px)" }
   };
 
   useEffect(() => {
@@ -218,18 +218,13 @@ const UserRoutes = () => {
             </Routes>
           </div>
         ) : (
-          <AnimatePresence mode='wait' exitBeforeEnter>
+          <AnimatePresence mode='wait'>
             <motion.div
               key={location.pathname}
               variants={animationOptions}
               initial="initial"
               animate="animate"
               exit="exit"
-              style={{
-                position: "relative",
-                width: "100%",
-                minHeight: "100vh",
-              }}
             >
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Navigate to={`/${currentLang}`} replace />} />
