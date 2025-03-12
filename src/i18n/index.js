@@ -8,7 +8,6 @@ import { de } from "./translations.js/de";
 const resources = {
   en: { translation: en },
   ua: { translation: ua },
-  ru: { translation: ua }, 
   de: { translation: de },
 };
 
