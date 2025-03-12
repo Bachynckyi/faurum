@@ -218,7 +218,7 @@ const UserRoutes = () => {
             </Routes>
           </div>
         ) : (
-          <AnimatePresence mode='wait'>
+          <AnimatePresence mode='sync'>
             <motion.div
               key={location.pathname}
               variants={animationOptions}
