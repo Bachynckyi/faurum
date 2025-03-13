@@ -9,7 +9,6 @@ const OptimizedImage = ({ src, alt, className}) => {
       <LazyLoadImage
         src={src}
         alt={alt}
-        // effect="blur"
         className={className}
         onLoad={() => setLoaded(true)}
         style={{ opacity: loaded ? 1 : 0, transition: "opacity 0.3s ease-in-out"}}
