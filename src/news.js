@@ -1,13 +1,13 @@
-import xjvowzctum_1 from "./images/news/xjvowzctum_1.jpg";
-import xjvowzctum_2 from "./images/news/xjvowzctum_2.jpg";
-import bnrleqdyha_1 from "./images/news/bnrleqdyha_1.jpg";
-import bnrleqdyha_2 from "./images/news/bnrleqdyha_2.jpg";
-import bnrleqdyha_3 from "./images/news/bnrleqdyha_3.jpg";
-import pkmsvzutgf_1 from "./images/news/pkmsvzutgf_1.png";
-import qwoeijxhcd_1 from "./images/news/qwoeijxhcd_1.jpg";
-import qwoeijxhcd_2 from "./images/news/qwoeijxhcd_2.jpg";
-import qwoeijxhcd_3 from "./images/news/qwoeijxhcd_3.jpg";
-import qwoeijxhcd_5 from "./images/news/qwoeijxhcd_5.jpg";
+import xjvowzctum_1 from "./images/news/xjvowzctum_1.webp";
+import xjvowzctum_2 from "./images/news/xjvowzctum_2.webp";
+import bnrleqdyha_1 from "./images/news/bnrleqdyha_1.webp";
+import bnrleqdyha_2 from "./images/news/bnrleqdyha_2.webp";
+import bnrleqdyha_3 from "./images/news/bnrleqdyha_3.webp";
+import pkmsvzutgf_1 from "./images/news/pkmsvzutgf_1.webp";
+import qwoeijxhcd_1 from "./images/news/qwoeijxhcd_1.webp";
+import qwoeijxhcd_2 from "./images/news/qwoeijxhcd_2.webp";
+import qwoeijxhcd_3 from "./images/news/qwoeijxhcd_3.webp";
+import qwoeijxhcd_5 from "./images/news/qwoeijxhcd_5.webp";
 
 
 export const news = [

@@ -6,7 +6,7 @@ import Footer from 'components/Footer/Footer';
 import MetaTags from "./../../helpers/metaTags";
 
 const NotFoundPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const metaTags = MetaTags();
 
   return (
@@ -25,7 +25,7 @@ const NotFoundPage = () => {
                 <div className={scss.content_wrapper}>
                     <h1 className={scss.title}>{t("PageNotFound_title_error")}</h1>
                     <h1 className={scss.title}>{t("PageNotFound_title_text")}</h1>
-                    <NavLink to="/" className={scss.button}>{t("PageNotFound_title_link")}</NavLink>
+                    <NavLink to={`/${i18n.language}`} className={scss.button}>{t("PageNotFound_title_link")}</NavLink>
                 </div>
             </div>
             <div className={scss.footer_container}>
