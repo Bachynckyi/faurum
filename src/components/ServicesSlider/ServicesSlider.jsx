@@ -9,8 +9,8 @@ import NextArrow from "./NextArrow/NextArrow";
 import { useTranslation } from "react-i18next";
 
 const serviceImages = [
-  "service1.jpg", "service2.jpg", "service3.jpg", "service4.jpg", "service5.png",
-  "service6.jpg", "service7.jpg", "service8.jpg", "service9.jpg"
+  "service1.webp", "service2.webp", "service3.webp", "service4.webp", "service5.webp",
+  "service6.webp", "service7.webp", "service8.webp", "service9.webp"
 ].map(img => require(`../../images/services/${img}`));
 
 

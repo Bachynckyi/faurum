@@ -45,7 +45,7 @@
 .button_download {
     max-width: 320px;
     width: 100%;
-    height: 70px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -53,9 +53,10 @@
     gap: 15px;
     border: none;
     background-color: #00A3FF;
-    border-radius: 24px;
+    border-radius: 16px;
     scale: 1;
     transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
 
     &:hover {
         scale: 1.05;

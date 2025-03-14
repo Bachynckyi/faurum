@@ -1,6 +1,6 @@
 import scss from './TeamMemberPage.module.scss';
 import { useTranslation } from 'react-i18next';
-import photo from '../../images/team/team_member_3.jpg';
+import photo from '../../images/team/team_member_3.webp';
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';

@@ -1,5 +1,5 @@
 import scss from './ReviewsPage.module.scss';
-import userIcon from '../../images/user_icon.png';
+import userIcon from '../../images/user_icon.webp';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';

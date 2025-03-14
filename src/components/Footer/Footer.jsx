@@ -54,8 +54,8 @@ useEffect(() => {
                         <a className={scss.contacts_text} href="mailto: info@clinic-aurum.com">info@clinic-aurum.com</a>
                     </div>
                     <div className={scss.contacts_services}>
-                        <Link to="https://www.facebook.com/profile.php?id=61571048378069&sk=about" target='_blank'><FacebookIcon className={scss.contacts_icon_facebook}/></Link>
-                        <Link to="https://t.me/centeraurum" target='_blank'><TelegramIcon className={scss.contacts_icon_telegram}/></Link>
+                        <Link to="https://www.facebook.com/profile.php?id=61571048378069&sk=about" target='_blank' aria-label="Facebook"><FacebookIcon alt='facebook_icon' className={scss.contacts_icon_facebook}/></Link>
+                        <Link to="https://t.me/centeraurum" target='_blank' aria-label="Telegram"><TelegramIcon alt='telegram_icon' className={scss.contacts_icon_telegram}/></Link>
                     </div>
                 </div>
                 <div className={scss.services_container}>
@@ -91,9 +91,9 @@ useEffect(() => {
                     </ul>
                 </div>
                 <div className={scss.logo_container}>
-                    {logo === "ua" && (<NavLink to="/"><LogoUA className={scss.logo}/></NavLink>)}
-                    {logo === "de" && (<NavLink to="/"><LogoDE className={scss.logo}/></NavLink>)}
-                    {logo === "en" && (<NavLink to="/"><LogoEN className={scss.logo}/></NavLink>)}
+                    {logo === "ua" && (<Link to={`/${i18n.language}`} aria-label="Aurum website"><LogoUA className={scss.logo}/></Link>)}
+                    {logo === "de" && (<Link to={`/${i18n.language}`} aria-label="Aurum website"><LogoDE className={scss.logo}/></Link>)}
+                    {logo === "en" && (<Link to={`/${i18n.language}`} aria-label="Aurum website"><LogoEN className={scss.logo}/></Link>)}
                     <div className={scss.politics_license_wrapper_desktop}>
                         <p className={scss.license}>{t("Footer_license")}</p>
                         <p className={scss.license}>© {t("Footer_center_name")} {currentYear}</p>

@@ -1,8 +1,8 @@
 import scss from './HomePage.module.scss';
 import { Link } from 'react-router-dom';
-import teamPhoto1 from '../../images/team_photo1.jpg';
-import teamPhoto2 from '../../images/team_photo2.jpg';
-import teamPhoto3 from '../../images/team_photo3.jpg';
+import teamPhoto1 from '../../images/team_photo1.webp';
+import teamPhoto2 from '../../images/team_photo2.webp';
+import teamPhoto3 from '../../images/team_photo3.webp';
 import Footer from 'components/Footer/Footer';
 import { ReactComponent as BackgroundLeft1} from "../../images/background_left1.svg";
 import { ReactComponent as BackgroundLeft2} from "../../images/background_left2.svg";

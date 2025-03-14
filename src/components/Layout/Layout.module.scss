@@ -41,7 +41,7 @@
     bottom: 0px;
     width: 100vw;
     height: 1375px;
-    background: url("../../images/background_3.jpg");
+    background: url("../../images/background_3.webp");
     background-size: cover;
     filter: blur(25px);
     z-index: 2;
@@ -52,7 +52,7 @@
     };
 
     @media screen and (min-width: 1024px) {
-        background: url("../../images/background_3.1.jpg");
+        background: url("../../images/background_3.1.webp");
     };
 
     @media screen and (min-width: 1440px) {

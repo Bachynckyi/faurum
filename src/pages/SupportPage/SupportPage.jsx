@@ -1,7 +1,7 @@
 import scss from './SupportPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-import QR from "../../images/QR.png";
+import QR from "../../images/QR.webp";
 import { MdContentCopy } from "react-icons/md";
 import copy from 'copy-to-clipboard';
 import Notiflix from 'notiflix';

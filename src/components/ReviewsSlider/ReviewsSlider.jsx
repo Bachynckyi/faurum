@@ -2,7 +2,7 @@ import scss from './ReviewsSlider.module.scss';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
-import userIcon from '../../images/user_icon.png'
+import userIcon from '../../images/user_icon.webp'
 import { useTranslation } from 'react-i18next';
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
 

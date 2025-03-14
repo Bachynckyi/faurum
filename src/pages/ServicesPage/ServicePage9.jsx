@@ -1,5 +1,5 @@
 import scss from "./ServicePage.module.scss";
-import service9 from '../../images/services/service9.jpg';
+import service9 from '../../images/services/service9.webp';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
