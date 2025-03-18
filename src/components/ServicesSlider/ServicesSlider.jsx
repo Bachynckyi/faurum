@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const serviceImages = [
   "service1.webp", "service2.webp", "service3.webp", "service4.webp", "service5.webp",
-  "service6.webp", "service7.webp", "service8.webp", "service9.webp"
+  "service6.webp", "service7.webp", "service8.webp", "service9.webp", "service10.webp"
 ].map(img => require(`../../images/services/${img}`));
 
 
@@ -74,8 +74,10 @@ const ServicesSlider = () => {
     { textKeys: ["Home_services_text5.1", "Home_services_text5.2"], descKey: "Home_services_description5", link: `/${i18n.language}/services/manualna-terapiya-hrebta-ta-suglobiv` },
     { textKeys: ["Home_services_text6.1", "Home_services_text6.2"], descKey: "Home_services_description6", link: `/${i18n.language}/services/ritmichne-vtirannya` },
     { textKeys: ["Home_services_text7"], descKey: "Home_services_description7", link: `/${i18n.language}/services/kinezioterapiya` },
-    { textKeys: ["Home_services_text9.1", "Home_services_text9.2"], descKey: "Home_services_description9", link: `/${i18n.language}/services/maslyano-dispersijni-vanni` },
-    { textKeys: ["Home_services_text10.1", "Home_services_text10.2"], descKey: "Home_services_description10", link: `/${i18n.language}/services/aparatna-presoterapiya` }
+    { textKeys: ["Home_services_text8.1", "Home_services_text8.2"], descKey: "Home_services_description8", link: `/${i18n.language}/services/maslyano-dispersijni-vanni` },
+    { textKeys: ["Home_services_text9.1", "Home_services_text9.2"], descKey: "Home_services_description9", link: `/${i18n.language}/services/aparatna-presoterapiya` },
+    { textKeys: ["Home_services_text10.1", "Home_services_text10.2"], descKey: "Home_services_description10", link: `/${i18n.language}/services/osteopatiya-ta-kraniosakralna-terapiya` }
+
   ];
 
   return (

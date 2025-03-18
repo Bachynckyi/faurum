@@ -134,6 +134,7 @@ const Header = () => {
                     <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/kinezioterapiya`}>{t("Header_subnav10")}</NavLink>
                     <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/maslyano-dispersijni-vanni`}>{t("Header_subnav12")}</NavLink>
                     <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/aparatna-presoterapiya`}>{t("Header_subnav13")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_item_active : scss.submenu_item} to={`/${i18n.language}/services/osteopatiya-ta-kraniosakralna-terapiya`}>{t("Header_subnav15")}</NavLink>
                 </div>
               </li>
               <li className={scss.nav_item}>
@@ -227,6 +228,7 @@ const Header = () => {
                     <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/kinezioterapiya`}>{t("Header_subnav10")}</NavLink>
                     <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/maslyano-dispersijni-vanni`}>{t("Header_subnav12")}</NavLink>
                     <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/aparatna-presoterapiya`}>{t("Header_subnav13")}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? scss.submenu_mobile_item_active : scss.submenu_mobile_item} onClick={closeMobileMenu} to={`/${i18n.language}/services/osteopatiya-ta-kraniosakralna-terapiya`}>{t("Header_subnav15")}</NavLink>
                   </div>
                 </li>
                 <li>

@@ -124,3 +124,10 @@
     font-weight: 700;
     line-height: 150%;
 };
+
+.super_text {
+    width: calc(100vw - 40px);
+    margin: 0px auto;
+    max-width: 1440px;
+    z-index: 7;
+}

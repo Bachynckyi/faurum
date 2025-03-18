@@ -4,10 +4,32 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
 import MetaTags from "./../../helpers/metaTags";
+import ReactPlayer from "react-player";
+import { useRef } from "react";
+import { ReactComponent as Review1 } from '../../images/reviews/review1.svg';
+import { ReactComponent as Review2 } from '../../images/reviews/review2.svg';
+import { ReactComponent as Review3 } from '../../images/reviews/review3.svg';
+import { ReactComponent as Review4 } from '../../images/reviews/review4.svg';
+import { ReactComponent as Review5 } from '../../images/reviews/review5.svg';
 
 const ReviewsPage = () => {
   const { t } = useTranslation();
   const metaTags = MetaTags();
+  const isSnap = navigator.userAgent === "ReactSnap";
+  const playersRef = useRef([]);
+
+  const videos = [
+    "https://www.youtube-nocookie.com/watch?v=O8hW6GgZ6v4",
+    "https://www.youtube-nocookie.com/watch?v=mzYagWGKGlw",
+  ];
+
+  const handlePlay = (index) => {
+    playersRef.current.forEach((player, i) => {
+      if (i !== index && player) {
+        player.getInternalPlayer().pauseVideo(); 
+      }
+    });
+  };
 
   return (
     <>
@@ -21,6 +43,32 @@ const ReviewsPage = () => {
         <div className={scss.container}>
             <div className={scss.content_wrapper}>
             <h1 className={scss.title}>{t("Reviews_title")}</h1>
+            {!isSnap &&
+            videos.map((url, index) => (
+              <div className={scss.video_wrapper} key={index}>
+                <ReactPlayer
+                  ref={(el) => (playersRef.current[index] = el)}
+                  url={url}
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className={scss.react_player}
+                  onPlay={() => handlePlay(index)}
+                  config={{
+                    youtube: {
+                      playerVars: { rel: 0, modestbranding: 1 },
+                    },
+                  }}
+                />
+              </div>
+            ))}
+            <div className={scss.live_review_container}>
+              <Review1 className={scss.live_review}/>
+              <Review2 className={scss.live_review}/>
+              <Review3 className={scss.live_review3}/>
+              <Review4 className={scss.live_review}/>
+              <Review5 className={scss.live_review}/>
+            </div>
             <ul className={scss.list}>
                 <li className={scss.review_card}>
                     <div className={scss.review_user}>

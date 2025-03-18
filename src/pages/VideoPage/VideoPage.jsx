@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import scss from "./VideoPage.module.scss";
 import ReactPlayer from "react-player";
 import { useTranslation } from "react-i18next";
@@ -9,21 +8,6 @@ const VideoPage = () => {
   const { t } = useTranslation();
   const isSnap = navigator.userAgent === "ReactSnap";
   const metaTags = MetaTags(); 
-  const playersRef = useRef([]);
-
-  const videos = [
-    "https://www.youtube-nocookie.com/watch?v=wc8NOpoWYcE",
-    "https://www.youtube-nocookie.com/watch?v=O8hW6GgZ6v4",
-    "https://www.youtube-nocookie.com/watch?v=mzYagWGKGlw",
-  ];
-
-  const handlePlay = (index) => {
-    playersRef.current.forEach((player, i) => {
-      if (i !== index && player) {
-        player.getInternalPlayer().pauseVideo(); 
-      }
-    });
-  };
 
   return (
     <>      
@@ -37,17 +21,14 @@ const VideoPage = () => {
       <div className={scss.container}>
         <div className={scss.content_wrapper}>
           <h1 className={scss.title}>{t("Video_title")}</h1>
-          {!isSnap &&
-            videos.map((url, index) => (
-              <div className={scss.video_wrapper} key={index}>
+          {!isSnap && (
+              <div className={scss.video_wrapper}>
                 <ReactPlayer
-                  ref={(el) => (playersRef.current[index] = el)}
-                  url={url}
+                  url="https://www.youtube-nocookie.com/watch?v=wc8NOpoWYcE"
                   controls={true}
                   width="100%"
                   height="100%"
                   className={scss.react_player}
-                  onPlay={() => handlePlay(index)}
                   config={{
                     youtube: {
                       playerVars: { rel: 0, modestbranding: 1 },
@@ -55,7 +36,7 @@ const VideoPage = () => {
                   }}
                 />
               </div>
-            ))}
+            )}
         </div>
       </div>
     </> 

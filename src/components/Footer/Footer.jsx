@@ -88,6 +88,9 @@ useEffect(() => {
                         <li>
                             <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/aparatna-presoterapiya`}>{t("Footer_nav9")}</NavLink>
                         </li>
+                        <li>
+                            <NavLink className={({isActive}) => isActive ? scss.services_item_active : scss.services_item} to={`/${i18n.language}/services/osteopatiya-ta-kraniosakralna-terapiya`}>{t("Footer_nav10")}</NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className={scss.logo_container}>

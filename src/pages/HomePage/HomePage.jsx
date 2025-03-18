@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import teamPhoto1 from '../../images/team_photo1.webp';
 import teamPhoto2 from '../../images/team_photo2.webp';
 import teamPhoto3 from '../../images/team_photo3.webp';
+import homePhoto1 from '../../images/home1.webp';
+import homePhoto2 from '../../images/home2.webp';
 import Footer from 'components/Footer/Footer';
 import { ReactComponent as BackgroundLeft1} from "../../images/background_left1.svg";
 import { ReactComponent as BackgroundLeft2} from "../../images/background_left2.svg";
@@ -137,6 +139,10 @@ const HomePage = () => {
                         <span className={scss.about_title_desktop}>{t("Home_about_title")}</span>
                         <span className={scss.about_text}>{t("Home_about_text")}</span>
                         <Link className={scss.about_link} to={`/${i18n.language}/about/presentation`}>{t("Home_about_link")}</Link>
+                        <div className={scss.about_image_wrapper}>
+                        <OptimizedImage src={homePhoto1} alt='homeImage' className={scss.about_homePhoto1}/>
+                        <OptimizedImage src={homePhoto2} alt='homeImage' className={scss.about_homePhoto2}/>
+                        </div>
                     </div>
                 </div>
                 <div className={scss.partners_container}>

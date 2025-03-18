@@ -12,20 +12,20 @@ const ServicePage9 = () => {
   return (
     <>
       <Helmet>
-        <title>{t("Service_title10")}</title>
-        <meta name="description" content={t("Home_services_description10")}/>
+        <title>{t("Service_title9")}</title>
+        <meta name="description" content={t("Home_services_description9")}/>
         {/* <link rel="canonical" href="https://www.clinic-aurum.com/services"></link> */}
-        <meta property="og:title" content={t("Service_title10")} />
-        <meta property="og:description" content={t("Home_services_description10")}/>
+        <meta property="og:title" content={t("Service_title9")} />
+        <meta property="og:description" content={t("Home_services_description9")}/>
         {metaTags}
       </Helmet>
       <div className={scss.container}>
           <div className={scss.main_wrapper}>
-              <h1 className={scss.title}>{t("Service_title10")}</h1>
+              <h1 className={scss.title}>{t("Service_title9")}</h1>
               <div className={scss.content_wrapper}>
                 <OptimizedImage src={service9} alt='serviceImage' className={scss.image}/>
                 <div className={scss.subcontainer}>
-                  <span className={scss.description}>{t("Service_text10")}</span>
+                  <span className={scss.description}>{t("Service_text9")}</span>
                   <ul className={scss.list}>{t("Service_list")}
                       <li className={scss.item}>{t("Service_item1")}</li>
                       <li className={scss.item}>{t("Service_item2")}</li>

@@ -26,6 +26,7 @@ const ServicePage6 = lazy(() => import('./pages/ServicesPage/ServicePage6'));
 const ServicePage7 = lazy(() => import('./pages/ServicesPage/ServicePage7'));
 const ServicePage8 = lazy(() => import('./pages/ServicesPage/ServicePage8'));
 const ServicePage9 = lazy(() => import('./pages/ServicesPage/ServicePage9'));
+const ServicePage10 = lazy(() => import('./pages/ServicesPage/ServicePage10'));
 const TeamMember1Page = lazy(() => import('./pages/TeamPages/TeamMember1Page'));
 const TeamMember2Page = lazy(() => import('./pages/TeamPages/TeamMember2Page'));
 const TeamMember3Page = lazy(() => import('./pages/TeamPages/TeamMember3Page'));
@@ -133,6 +134,7 @@ const UserRoutes = () => {
                   <Route path="services/kinezioterapiya" element={<ServicePage7 />} />
                   <Route path="services/maslyano-dispersijni-vanni" element={<ServicePage8 />} />
                   <Route path="services/aparatna-presoterapiya" element={<ServicePage9 />} />
+                  <Route path="services/osteopatiya-ta-kraniosakralna-terapiya" element={<ServicePage10 />} />
                   <Route path="team/yevhen-volchenko" element={<TeamMember1Page />} />
                   <Route path="team/snizhana-shcherbakova" element={<TeamMember2Page />} />
                   <Route path="team/yuriy-korosko" element={<TeamMember3Page />} />

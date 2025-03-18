@@ -9,7 +9,6 @@ import qwoeijxhcd_2 from "./images/news/qwoeijxhcd_2.webp";
 import qwoeijxhcd_3 from "./images/news/qwoeijxhcd_3.webp";
 import qwoeijxhcd_5 from "./images/news/qwoeijxhcd_5.webp";
 
-
 export const news = [
     {
         id: 'xjvowzctum', 

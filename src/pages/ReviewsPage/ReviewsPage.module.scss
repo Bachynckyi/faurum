@@ -91,11 +91,6 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-
-    // @media screen and (min-width: 1440px) {
-    //     font-size: 20px;
-    //     margin-left: 20px;
-    // };
 };
 
 .review_text {
@@ -107,3 +102,46 @@
     line-height: 150%;
     box-sizing: border-box;
 };
+
+.video_wrapper {
+    min-width: 280px;
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%;
+    margin-top: 30px;
+
+    @media screen and (min-width: 1024px) {
+        padding-top: 0px;
+        width: 45vw;
+        height: 60vh;
+        max-width: 1008px;
+        max-height: 550px;
+    };
+};
+
+.react_player {
+    position: absolute;
+    top: 0;
+    left: 0;
+};
+
+.live_review_container {
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+};
+
+.live_review {
+    width: 70%;
+    height: 70%;
+}
+
+.live_review3 {
+    rotate: 90deg;
+    width: 70%;
+    height: 70%;
+}
