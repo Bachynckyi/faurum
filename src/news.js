@@ -8,6 +8,9 @@ import qwoeijxhcd_1 from "./images/news/qwoeijxhcd_1.webp";
 import qwoeijxhcd_2 from "./images/news/qwoeijxhcd_2.webp";
 import qwoeijxhcd_3 from "./images/news/qwoeijxhcd_3.webp";
 import qwoeijxhcd_5 from "./images/news/qwoeijxhcd_5.webp";
+import vwreifxhad_2 from "./images/news/vwreifxhad_2.webp";
+import vwreifxhad_3 from "./images/news/vwreifxhad_3.webp";
+import vwreifxhad_4 from "./images/news/vwreifxhad_4.webp";
 
 export const news = [
     {
@@ -81,5 +84,23 @@ export const news = [
         image4: qwoeijxhcd_3,
         image5: "",
         date: "10.06.2023",
+    },
+    {
+        id: 'vwreifxhad', 
+        titleUA: "23 грудня  2023 року в театрі «Сузір’я» відбувся благодійний аукціон в підтримку Реабілітаційного Центру «Аурум», в якому взяли участь Ада Роговцева та Олег Скрипка.", 
+        titleEN: "On December 23, 2023, a charity auction was held at the «Suzir'ya» Theater in support of the «Aurum» Rehabilitation Center, in which Ada Rogovtseva and Oleg Skrypka participated.", 
+        titleDE: "Am 23. Dezember 2023 fand im Theater „Suzir'ya“ eine Wohltätigkeitsauktion zugunsten des Rehabilitationszentrums „Aurum“ statt, an der Ada Rogovtseva und Oleg Skrypka teilnahmen.",
+        text1UA: "23 грудня  2023 року в театрі «Сузір’я» відбувся благодійний аукціон в підтримку Реабілітаційного Центру «Аурум», в якому взяли участь Ада Роговцева та Олег Скрипка.",
+        text1EN: "On December 23, 2023, a charity auction was held at the «Suzir'ya» Theater in support of the «Aurum» Rehabilitation Center, in which Ada Rogovtseva and Oleg Skrypka participated.",
+        text1DE: "Am 23. Dezember 2023 fand im Theater „Suzir'ya“ eine Wohltätigkeitsauktion zugunsten des Rehabilitationszentrums „Aurum“ statt, an der Ada Rogovtseva und Oleg Skrypka teilnahmen.",
+        text2UA: "",
+        text2EN: "",
+        text2DE: "",
+        image1: vwreifxhad_3,
+        image2: "",
+        image3: vwreifxhad_2,
+        image4: vwreifxhad_4,
+        image5: "",
+        date: "23.12.2023",
     },
 ];
