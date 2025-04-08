@@ -6,7 +6,7 @@ import Partner4 from '../../images/partners/Best.webp';
 import Partner5 from '../../images/partners/Vertolet.webp';
 import Partner6 from '../../images/partners/EBA.webp';
 import Partner7 from '../../images/partners/MMH.webp';
-import Partner8 from '../../images/partners/Helias.webp';
+import Partner8 from '../../images/partners/helias.webp';
 import Partner9 from '../../images/partners/Fes.webp';
 import Partner10 from '../../images/partners/Gladsal.webp';
 import Partner11 from '../../images/partners/Casual.webp';
