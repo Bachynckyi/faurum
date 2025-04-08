@@ -19,7 +19,6 @@ import Partner17 from '../../images/partners/Suziria.webp';
 import Partner18 from '../../images/partners/Academy.webp';
 import Partner19 from '../../images/partners/E+.webp';
 import Partner20 from '../../images/partners/Ukr_ter.webp';
-
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
 
 const Partners = () => {
