@@ -1,5 +1,5 @@
 import scss from './Partners.module.scss';
-import Partner1 from '../../images/partners/Parzival-zentrum.webp';
+import Partner1 from '../../images/partners/parzival-zentrum.webp';
 import Partner2 from '../../images/partners/Association.webp';
 import Partner3 from '../../images/partners/MHP.webp';
 import Partner4 from '../../images/partners/Best.webp';
