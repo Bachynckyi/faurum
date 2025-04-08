@@ -11,8 +11,29 @@ import qwoeijxhcd_5 from "./images/news/qwoeijxhcd_5.webp";
 import vwreifxhad_2 from "./images/news/vwreifxhad_2.webp";
 import vwreifxhad_3 from "./images/news/vwreifxhad_3.webp";
 import vwreifxhad_4 from "./images/news/vwreifxhad_4.webp";
+import htvoaicoum_1 from './images/news/htvoaicoum_1.webp';
+import htvoaicoum_2 from './images/news/htvoaicoum_2.webp';
+import htvoaicoum_3 from './images/news/htvoaicoum_3.webp';
 
 export const news = [
+    {
+        id: 'htvoaicoum', 
+        titleUA: "Підписання меморандуму з Річковою Флотилією", 
+        titleEN: "Signing of a memorandum with the River Flotilla", 
+        titleDE: "Unterzeichnung eines Memorandums mit der Flussflottille",
+        text1UA: "В березні 2025 року у Києві було підписано меморандум між Річковою Флотилією та Реабілітаційним центром Аурум.",
+        text1EN: "In March 2025, a memorandum was signed in Kyiv between the River Flotilla and the Aurum Rehabilitation Center.",
+        text1DE: "Im März 2025 wurde in Kiew ein Memorandum zwischen der Flussflottille und dem Aurum-Rehabilitationszentrum unterzeichnet.",
+        text2UA: "",
+        text2EN: "",
+        text2DE: "",
+        image1: htvoaicoum_1,
+        image2: "",
+        image3: htvoaicoum_3,
+        image4: htvoaicoum_2,
+        image5: "",
+        date: "25.03.2025",
+    },
     {
         id: 'xjvowzctum', 
         titleUA: "Форум миротворців у Відні", 

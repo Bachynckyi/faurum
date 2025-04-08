@@ -6,11 +6,6 @@ import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
 import MetaTags from "./../../helpers/metaTags";
 import ReactPlayer from "react-player";
 import { useRef } from "react";
-import { ReactComponent as Review1 } from '../../images/reviews/review1.svg';
-import { ReactComponent as Review2 } from '../../images/reviews/review2.svg';
-import { ReactComponent as Review3 } from '../../images/reviews/review3.svg';
-import { ReactComponent as Review4 } from '../../images/reviews/review4.svg';
-import { ReactComponent as Review5 } from '../../images/reviews/review5.svg';
 
 const ReviewsPage = () => {
   const { t } = useTranslation();
@@ -62,13 +57,6 @@ const ReviewsPage = () => {
                 />
               </div>
             ))}
-            <div className={scss.live_review_container}>
-              <Review1 className={scss.live_review}/>
-              <Review2 className={scss.live_review}/>
-              <Review3 className={scss.live_review3}/>
-              <Review4 className={scss.live_review}/>
-              <Review5 className={scss.live_review}/>
-            </div>
             <ul className={scss.list}>
                 <li className={scss.review_card}>
                     <div className={scss.review_user}>
