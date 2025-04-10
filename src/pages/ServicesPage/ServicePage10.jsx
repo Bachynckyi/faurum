@@ -25,7 +25,8 @@ const ServicePage10 = () => {
               <div className={scss.content_wrapper}>
                 <OptimizedImage src={service10} alt='serviceImage' className={scss.image}/>
                 <div className={scss.subcontainer}>
-                  <span className={scss.description}>{t("Service_text10")}</span>
+                  <span className={scss.description}>{t("Service_text10.1")}</span>
+                  <span className={scss.description}><br/>{t("Service_text10.2")}</span>
                 </div>
               </div>
             </div>

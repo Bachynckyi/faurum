@@ -200,6 +200,8 @@ export const de = {
         "Service_item8": "Stress, Schlaflosigkeit;",
         "Service_item9": "sich müde fühlen.",
         "Service_title10": "Osteopathie und Craniosacral-Therapie",
+        "Service_text10.1": "Osteopathie ist eine Methode der Alternativmedizin, die auf der Idee basiert, dass der Körper die Fähigkeit besitzt, sich selbst zu heilen, und dass die Gesundheit von der harmonischen Funktion des Bewegungsapparats, des Nerven- und Kreislaufsystems abhängt. Die moderne Osteopathie umfasst nicht nur die Arbeit mit dem Bewegungsapparat, sondern auch mit den inneren Organen und dem Nervensystem. Sein Hauptziel besteht darin, dem Körper zu helfen, das Gleichgewicht wiederherzustellen und die Selbstheilung auf natürliche Weise zu fördern.",
+        "Service_text10.2": "Die biodynamische Craniosacral-Therapie (BCST) ist eine nicht-invasive Methode, die darauf abzielt, die natürlichen Fähigkeiten des Körpers zur Selbstregulierung, Selbstkorrektur und Heilung zu unterstützen. Es basiert auf osteopathischen Prinzipien, die die Integrität des Körpers, die Beziehung zwischen Struktur und Funktion und die Idee anerkennen, dass es im Körper immer eine natürliche Bewegung in Richtung Gesundheit gibt.",
 
         // Team members global
         "TeamMember_education": "Ausbildung",
