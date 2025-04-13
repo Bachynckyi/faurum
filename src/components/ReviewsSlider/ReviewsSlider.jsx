@@ -88,6 +88,48 @@ const ReviewsSlider = () => {
               </div>
               <span className={scss.slider_review_text}>{t("Reviews_card_text5")}</span>
           </div>
+          <div className={scss.slider_review_card}>
+              <div className={scss.slider_review_user}>
+                  <OptimizedImage src={userIcon} alt='user'/>
+                  <span className={scss.slider_review_name}>{t("Reviews_card_name6")}</span>
+              </div>
+              <span className={scss.slider_review_text}>{t("Reviews_card_text6")}</span>
+          </div>
+          <div className={scss.slider_review_card}>
+              <div className={scss.slider_review_user}>
+                  <OptimizedImage src={userIcon} alt='user'/>
+                  <span className={scss.slider_review_name}>{t("Reviews_card_name7")}</span>
+              </div>
+              <span className={scss.slider_review_text}>{t("Reviews_card_text7")}</span>
+          </div>
+          <div className={scss.slider_review_card}>
+              <div className={scss.slider_review_user}>
+                  <OptimizedImage src={userIcon} alt='user'/>
+                  <span className={scss.slider_review_name}>{t("Reviews_card_name8")}</span>
+              </div>
+              <span className={scss.slider_review_text}>{t("Reviews_card_text8")}</span>
+          </div>
+          <div className={scss.slider_review_card}>
+              <div className={scss.slider_review_user}>
+                  <OptimizedImage src={userIcon} alt='user'/>
+                  <span className={scss.slider_review_name}>{t("Reviews_card_name9")}</span>
+              </div>
+              <span className={scss.slider_review_text}>{t("Reviews_card_text9")}</span>
+          </div>
+          <div className={scss.slider_review_card}>
+              <div className={scss.slider_review_user}>
+                  <OptimizedImage src={userIcon} alt='user'/>
+                  <span className={scss.slider_review_name}>{t("Reviews_card_name10")}</span>
+              </div>
+              <span className={scss.slider_review_text}>{t("Reviews_card_text10")}</span>
+          </div>
+          <div className={scss.slider_review_card}>
+              <div className={scss.slider_review_user}>
+                  <OptimizedImage src={userIcon} alt='user'/>
+                  <span className={scss.slider_review_name}>{t("Reviews_card_name11")}</span>
+              </div>
+              <span className={scss.slider_review_text}>{t("Reviews_card_text11")}</span>
+          </div>
         </Slider>
     </div>
   )

@@ -93,6 +93,48 @@ const ReviewsPage = () => {
                     </div>
                     <span className={scss.review_text}>{t("Reviews_card_text5")}</span>
                 </li>
+                <li className={scss.review_card}>
+                    <div className={scss.review_user}>
+                        <OptimizedImage src={userIcon} alt='user'/>
+                        <span className={scss.review_name}>{t("Reviews_card_name6")}</span>
+                    </div>
+                    <span className={scss.review_text}>{t("Reviews_card_text6")}</span>
+                </li>
+                <li className={scss.review_card}>
+                    <div className={scss.review_user}>
+                        <OptimizedImage src={userIcon} alt='user'/>
+                        <span className={scss.review_name}>{t("Reviews_card_name7")}</span>
+                    </div>
+                    <span className={scss.review_text}>{t("Reviews_card_text7")}</span>
+                </li>
+                <li className={scss.review_card}>
+                    <div className={scss.review_user}>
+                        <OptimizedImage src={userIcon} alt='user'/>
+                        <span className={scss.review_name}>{t("Reviews_card_name8")}</span>
+                    </div>
+                    <span className={scss.review_text}>{t("Reviews_card_text8")}</span>
+                </li>
+                <li className={scss.review_card}>
+                    <div className={scss.review_user}>
+                        <OptimizedImage src={userIcon} alt='user'/>
+                        <span className={scss.review_name}>{t("Reviews_card_name9")}</span>
+                    </div>
+                    <span className={scss.review_text}>{t("Reviews_card_text9")}</span>
+                </li>
+                <li className={scss.review_card}>
+                    <div className={scss.review_user}>
+                        <OptimizedImage src={userIcon} alt='user'/>
+                        <span className={scss.review_name}>{t("Reviews_card_name10")}</span>
+                    </div>
+                    <span className={scss.review_text}>{t("Reviews_card_text10")}</span>
+                </li>
+                <li className={scss.review_card}>
+                    <div className={scss.review_user}>
+                        <OptimizedImage src={userIcon} alt='user'/>
+                        <span className={scss.review_name}>{t("Reviews_card_name11")}</span>
+                    </div>
+                    <span className={scss.review_text}>{t("Reviews_card_text11")}</span>
+                </li>
             </ul>
             </div>
         </div>

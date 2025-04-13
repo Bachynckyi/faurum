@@ -22,11 +22,26 @@ const ServicePage10 = () => {
       <div className={scss.container}>
           <div className={scss.main_wrapper}>
               <h1 className={scss.title}>{t("Service_title10")}</h1>
-              <div className={scss.content_wrapper}>
+              <div className={scss.content_wrapper10}>
                 <OptimizedImage src={service10} alt='serviceImage' className={scss.image}/>
-                <div className={scss.subcontainer}>
-                  <span className={scss.description}>{t("Service_text10.1")}</span>
-                  <span className={scss.description}><br/>{t("Service_text10.2")}</span>
+                <div className={scss.subcontainer10}>
+                  <div className={scss.container_part}>
+                    <span className={scss.description}>{t("Service_text10.1")}</span>
+                    <span className={scss.description}><br/>{t("Service_text10.2")}</span>
+                  </div>
+                  <div className={scss.container_part}>
+                    <span className={scss.description}>{t("Service_text10.3")}</span>
+                    <span className={scss.description}><br/>{t("Service_text10.4")}</span>
+                    <ul className={scss.list}>{t("Service_text10_list")}
+                        <li className={scss.item}>{t("Service_text10_item1")}</li>
+                        <li className={scss.item}>{t("Service_text10_item2")}</li>
+                        <li className={scss.item}>{t("Service_text10_item3")}</li>
+                        <li className={scss.item}>{t("Service_text10_item4")}</li>
+                    </ul>
+                    <span className={scss.description}><br/>{t("Service_text10.5")}</span>
+                    <span className={scss.description}><br/>{t("Service_text10.6")}</span>
+                    <span className={scss.description}><br/>{t("Service_text10.7")}</span>
+                  </div>
                 </div>
               </div>
             </div>

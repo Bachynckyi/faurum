@@ -18,9 +18,9 @@ import htvoaicoum_3 from './images/news/htvoaicoum_3.webp';
 export const news = [
     {
         id: 'htvoaicoum', 
-        titleUA: "Підписання меморандуму з Річковою Флотилією", 
-        titleEN: "Signing of a memorandum with the River Flotilla", 
-        titleDE: "Unterzeichnung eines Memorandums mit der Flussflottille",
+        titleUA: "Підписання Меморандуму  з Річковою Флотилією Військово-Морських Збройних Сил України", 
+        titleEN: "Signing of a Memorandum with the River Flotilla of the Naval Armed Forces of Ukraine", 
+        titleDE: "Unterzeichnung eines Memorandums mit der Flussflottille der Seestreitkräfte der Ukraine",
         text1UA: "В березні 2025 року у Києві було підписано меморандум між Річковою Флотилією Військово - Морських Сил Збройних Сил України , ГО «Всеукраїнська Асоціація Гемокорекції та Реабілітації» та Реабілітаційним Центром «Аурум».",
         text1EN: "In March 2025, a memorandum was signed in Kyiv between the River Flotilla of the Naval Forces of the Armed Forces of Ukraine, the NGO „All-Ukrainian Association of Hemocorrection and Rehabilitation“ and the Rehabilitation Center „Aurum“.",
         text1DE: "Im März 2025 wurde in Kiew ein Memorandum zwischen der Flussflottille der Seestreitkräfte der Streitkräfte der Ukraine, der NGO „Allukrainische Vereinigung für Hämokorrektur und Rehabilitation“ und dem Rehabilitationszentrum „Aurum“ unterzeichnet.",
