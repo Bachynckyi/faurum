@@ -67,6 +67,7 @@ export const en = {
     "Home_services_description7": "Kinesitherapy or movement therapy is a direction of physical therapy that involves performing active and passive movements, certain therapeutic exercises, and working on simulators to achieve a specific therapeutic result.",
     "Home_services_description8": "Oil-dispersion baths are a technique based on the distribution of specially prepared oils through an oil-dispersion apparatus in water droplets.",
     "Home_services_description9": "Pressotherapy is a painless procedure that involves removing lymph stagnation in certain areas of the body's lymphatic system.",
+    "Home_services_description10": "are alternative medicine methods that aim to support the body's natural ability to self-regulate, self-correct, and heal.",
     "Home_services_button": "Learn more",
     "Home_partners_title1": "Our ",
     "Home_partners_title2": "partners",

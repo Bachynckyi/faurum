@@ -66,6 +66,7 @@ export const de = {
         "Home_services_description7": "Kinesiotherapie oder Bewegungstherapie ist eine Richtung der physikalischen Therapie, bei der aktive und passive Bewegungen, bestimmte therapeutische Übungen und die Arbeit an Simulatoren durchgeführt werden, um ein bestimmtes therapeutisches Ergebnis zu erzielen.",
         "Home_services_description8": "Öldispersionsbäder sind eine Technik, die auf der Verteilung speziell zubereiteter Öle durch eine Öldispersionsvorrichtung in Wassertropfen basiert.",
         "Home_services_description9": "Bei der Pressotherapie handelt es sich um eine schmerzlose Behandlung, bei der Lymphstauungen in bestimmten Bereichen des Lymphsystems des Körpers beseitigt werden.",
+        "Home_services_description10": "sind alternative medizinische Methoden, die darauf abzielen, die natürliche Fähigkeit des Körpers zur Selbstregulierung, Selbstkorrektur und Heilung zu unterstützen.",
         "Home_services_button": "Mehr erfahren",
         "Home_partners_title1": "Unsere ",
         "Home_partners_title2": "Partner",
