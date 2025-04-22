@@ -135,6 +135,13 @@ const ReviewsPage = () => {
                     </div>
                     <span className={scss.review_text}>{t("Reviews_card_text11")}</span>
                 </li>
+                <li className={scss.review_card}>
+                    <div className={scss.review_user}>
+                        <OptimizedImage src={userIcon} alt='user'/>
+                        <span className={scss.review_name}>{t("Reviews_card_name12")}</span>
+                    </div>
+                    <span className={scss.review_text}>{t("Reviews_card_text12")}</span>
+                </li>
             </ul>
             </div>
         </div>

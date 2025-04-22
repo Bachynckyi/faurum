@@ -130,6 +130,13 @@ const ReviewsSlider = () => {
               </div>
               <span className={scss.slider_review_text}>{t("Reviews_card_text11")}</span>
           </div>
+          <div className={scss.slider_review_card}>
+              <div className={scss.slider_review_user}>
+                  <OptimizedImage src={userIcon} alt='user'/>
+                  <span className={scss.slider_review_name}>{t("Reviews_card_name12")}</span>
+              </div>
+              <span className={scss.slider_review_text}>{t("Reviews_card_text12")}</span>
+          </div>
         </Slider>
     </div>
   )

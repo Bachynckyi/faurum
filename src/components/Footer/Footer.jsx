@@ -51,7 +51,7 @@ useEffect(() => {
                     </div>
                     <div className={scss.contacts_info}>
                         <EmailIcon/>
-                        <a className={scss.contacts_text} href="mailto: info@clinic-aurum.com">info@clinic-aurum.com</a>
+                        <a className={scss.contacts_text} href="mailto: center.aurum.kyiv@gmail.com">center.aurum.kyiv@gmail.com</a>
                     </div>
                     <div className={scss.contacts_services}>
                         <Link to="https://www.facebook.com/profile.php?id=61571048378069&sk=about" target='_blank' aria-label="Facebook"><FacebookIcon alt='facebook_icon' className={scss.contacts_icon_facebook}/></Link>

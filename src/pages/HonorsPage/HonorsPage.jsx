@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import OptimizedImage from '../../components/OptimazedImage/OptimazedImage';
 import MetaTags from "./../../helpers/metaTags";
 
-const honorImages = Array.from({ length: 14 }, (_, i) =>
+const honorImages = Array.from({ length: 12 }, (_, i) =>
   require(`../../images/honors/honor${i + 1}.webp`)
 );
 
