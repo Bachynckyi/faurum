@@ -14,6 +14,8 @@ import vwreifxhad_4 from "./images/news/vwreifxhad_4.webp";
 import htvoaicoum_1 from './images/news/htvoaicoum_1.webp';
 import htvoaicoum_2 from './images/news/htvoaicoum_2.webp';
 import htvoaicoum_3 from './images/news/htvoaicoum_3.webp';
+import namxzzyhofm_1 from './images/news/namxzzyhofm_1.webp';
+import namxzzyhofm_2 from './images/news/namxzzyhofm_2.webp';
 
 export const news = [
     {
@@ -87,6 +89,24 @@ export const news = [
         image4: vwreifxhad_4,
         image5: "",
         date: "23.12.2023",
+    },
+    {
+        id: 'namxzzyhofm', 
+        titleUA: "11 листопада 2023 року разом із рекламною агенцією die Klass Werbeagentur та Barockkirche в Релінгені (Німеччина, Гамбург) було проведено благодійний концерт в підтримку  Реабілітаційного Центру «Аурум». В заході взяли участь німецький та український хори. Щиро дякуємо всім гостям та музикантам, що приєдналися до акції!", 
+        titleEN: "On November 11, 2023, together with the advertising agency die Klass Werbeagentur and the Barockkirche in Relingen (Germany, Hamburg), a charity concert was held in support of the Aurum Rehabilitation Center. German and Ukrainian choirs took part in the event. We sincerely thank all the guests and musicians who joined the event!", 
+        titleDE: "Am 11. November 2023 fand gemeinsam mit der Klass Werbeagentur und der Barockkirche in Relingen (Deutschland, Hamburg) ein Benefizkonzert zugunsten des Reha-Zentrums Aurum statt. An der Veranstaltung nahmen deutsche und ukrainische Chöre teil. Wir danken allen Gästen und Musikern, die bei der Veranstaltung dabei waren, herzlich!",
+        text1UA: "11 листопада 2023 року разом із рекламною агенцією die Klass Werbeagentur та Barockkirche в Релінгені (Німеччина, Гамбург) було проведено благодійний концерт в підтримку  Реабілітаційного Центру «Аурум». В заході взяли участь німецький та український хори. Щиро дякуємо всім гостям та музикантам, що приєдналися до акції!",
+        text1EN: "On November 11, 2023, together with the advertising agency die Klass Werbeagentur and the Barockkirche in Relingen (Germany, Hamburg), a charity concert was held in support of the Aurum Rehabilitation Center. German and Ukrainian choirs took part in the event. We sincerely thank all the guests and musicians who joined the event!",
+        text1DE: "Am 11. November 2023 fand gemeinsam mit der Klass Werbeagentur und der Barockkirche in Relingen (Deutschland, Hamburg) ein Benefizkonzert zugunsten des Reha-Zentrums Aurum statt. An der Veranstaltung nahmen deutsche und ukrainische Chöre teil. Wir danken allen Gästen und Musikern, die bei der Veranstaltung dabei waren, herzlich!",
+        text2UA: "",
+        text2EN: "",
+        text2DE: "",
+        image1: namxzzyhofm_1,
+        image2: "",
+        image3: namxzzyhofm_2,
+        image4: "",
+        image5: "",
+        date: "11.11.2023",
     },
     {
         id: 'pkmsvzutgf', 
