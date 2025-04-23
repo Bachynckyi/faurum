@@ -281,6 +281,7 @@ export const en = {
     "TeamMember3_text5": "2015-2016 Eastern European School of Osteopathy, Craniosacral Therapy",
     "TeamMember3_text6": "2013-2014 Association of Folk Manual Therapy, manual therapy of internal organs",
     "TeamMember3_text7": "1997-2003 Taras Shevchenko National University of Kyiv, Photonics, Master of Physics",
+    "TeamMember3_text8": "2022-2024 Biodynamische Craniosacral-Therapie, CTET, London, England",
     "TeamMember3_publication1": "KOROSKO, Y. I. FEATURES OF OVERCOMING COMBAT STRESS BY MILITARY SERVICEMEN IN WAR CONDITIONS // Bulletin of the Student Scientific Society. 2023. No. 29. P. 231-236",
     "TeamMember3_publication2": "KOROSKO, Y. I.; MYKHAYLOVA, O. I. THE ROLE OF SOCIAL SUPPORT IN THE PROCESS OF FORMING STRESS RESILIENCE OF MILITARY SERVICEMEN. Editorial Board, 2023, 60.",
 

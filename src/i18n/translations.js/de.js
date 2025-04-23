@@ -280,6 +280,7 @@ export const de = {
         "TeamMember3_text5": "2015-2016 Osteuropäische Schule für Osteopathie, Craniosacrale Therapie",
         "TeamMember3_text6": "2013-2014 Association of Folk Manual Therapy, manuelle Therapie der inneren Organe",
         "TeamMember3_text7": "1997-2003 Nationale Taras-Schewtschenko-Universität Kiew, Photonik, Master of Physics",
+        "TeamMember3_text8": "2022-2024 Biodynamic Craniosacral Therapy, CTET, London, England",
         "TeamMember3_publication1": "KOROSKO, Ju. ICH. Merkmale der Überwindung von Kampfstress durch Militärangehörige unter Kriegsbedingungen // Bulletin der Studentischen Wissenschaftlichen Gesellschaft. 2023. Nr. 29. S. 231-236",
         "TeamMember3_publication2": "KOROSKO, Ju. ICH.; MYKHAYLOVA, O. ICH. DIE ROLLE SOZIALER UNTERSTÜTZUNG IM PROZESS DER BILDUNG DER STRESSRESILIENZ BEI MILITÄRANGEHÖRIGEN. Redaktion, 2023, 60.",
 

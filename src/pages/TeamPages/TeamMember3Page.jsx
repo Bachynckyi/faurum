@@ -40,6 +40,7 @@ const TeamMember3Page = () => {
                 <li className={scss.list_item}>{t("TeamMember3_text5")}</li>
                 <li className={scss.list_item}>{t("TeamMember3_text6")}</li>
                 <li className={scss.list_item}>{t("TeamMember3_text7")}</li>
+                <li className={scss.list_item}>{t("TeamMember3_text8")}</li>
               </ul>
               <ul className={scss.list}>{t("TeamMember_publications")}:
                 <li className={scss.list_item}>
